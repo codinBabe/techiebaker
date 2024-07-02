@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: local("HelveticaNeueRegular"),
+    url("/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: local("HelveticaNeueMedium"),
+    url("/fonts/HelveticaNeueMedium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: local("HelveticaNeueBold"),
+    url("/fonts/HelveticaNeueBold.otf") format("opentype");
+  font-weight: 700;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "HelveticaNeueRegular";
+  @apply bg-orange100 text-base text-primaryBlack;
+}
+section {
+  background-image: url("./assets/bant\ light.svg");
+  background-repeat: no-repeat;
+  background-position: top right, bottom right;
+}
+div.menu ul li {
+  @apply text-black100;
+}
+div.menu ul li > .active {
+  @apply block w-full bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium;
+}
+div.contact-icons > a {
+  @apply flex flex-col items-center gap-2;
+}
+div.contact-icons > a span:first-child {
+  @apply w-14 h-14 bg-orange100 rounded-full p-2 flex items-center justify-center;
+}
