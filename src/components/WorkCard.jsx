@@ -5,6 +5,7 @@ export default function WorkCard({
   title,
   projectType,
   imgsrc,
+  imgsrclg,
   children,
   workId,
   onView,
@@ -26,8 +27,14 @@ export default function WorkCard({
             </Link>
           </div>
         </div>
-        <div className="mt-5">
-          <img src={imgsrc} alt="placeholder" />
+        <div className="mt-5 flex justify-end">
+          <img
+            src={imgsrc}
+            srcSet={`${imgsrclg} 1024w, ${imgsrc} 375w`}
+            sizes="(max-width: 768px) 640px, 1024px"
+            alt={title}
+            className="w-[90%] object-cover"
+          />
         </div>
       </div>
     </AnimationContainer>

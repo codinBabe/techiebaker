@@ -26,18 +26,21 @@ export default function WorksPage() {
           ? `View ${2 - projectsViewed} projects to win a free cupcake`
           : "Congratulations! You've won a free cupcake 🧁"}
       </p>
-      {Works.map((work) => (
-        <WorkCard
-          key={work.id}
-          title={work.title}
-          projectType={work.projectType}
-          imgsrc={work.imgsrc}
-          workId={work.id}
-          onView={handleProjectView}
-        >
-          <p>{work.text}</p>
-        </WorkCard>
-      ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {Works.map((work) => (
+          <WorkCard
+            key={work.id}
+            title={work.title}
+            projectType={work.projectType}
+            imgsrc={work.imgsrc}
+            imgsrclg={work.imgsrclg}
+            workId={work.id}
+            onView={handleProjectView}
+          >
+            <p>{work.text}</p>
+          </WorkCard>
+        ))}
+      </div>
     </CustomSection>
   );
 }

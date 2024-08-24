@@ -168,7 +168,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-5">
             <div>
               <h3 className="text-sm mb-2">LANGUAGES</h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 flex-wrap">
                 <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
                   C
                 </p>
@@ -177,6 +177,9 @@ export default function AboutPage() {
                 </p>
                 <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
                   Javascript
+                </p>
+                <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+                  Typescript
                 </p>
               </div>
             </div>

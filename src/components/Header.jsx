@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../utils/icons/Logo";
 import Menu from "../assets/menu.svg";
 import Close from "../assets/clear.svg";
@@ -24,23 +24,82 @@ export default function Header() {
       transition: { delay: 0.5 },
     },
   };
-
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
   return (
-    <header>
-      <nav className="w-[90%] mx-auto py-4 px-2">
-        <div className="flex items-center justify-between relative z-10">
-          <div>
-            <Logo />
-          </div>
-
-          <button
-            onClick={() => setIsOpen(true)}
-            className="flex items-center gap-1 text-sm relative z-10 bg-white rounded-[50px] p-3"
-          >
-            <img src={Menu} alt="menu" />
-            <span>MENU</span>
-          </button>
+    <header className="relative">
+      {/* Desktop View */}
+      <nav className="hidden md:flex w-[80%] mx-auto py-4 px-2 justify-between items-center">
+        <div>
+          <Logo />
         </div>
+        <div>
+          <ul className="flex items-center">
+            <li className="border border-orange400 py-[10px] px-[20px] rounded-tl-full rounded-bl-full">
+              <Link
+                to="/"
+                className={location.pathname === "/" ? "active" : ""}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="border border-orange400 py-[10px] px-[12px]">
+              <Link
+                to="/works"
+                className={location.pathname.includes("/works") ? "active" : ""}
+              >
+                Works
+              </Link>
+            </li>
+            <li className="border border-orange400 py-[10px] px-[12px]">
+              <Link
+                to="/about"
+                className={location.pathname === "/about" ? "active" : ""}
+              >
+                About
+              </Link>
+            </li>
+            <li className="border border-orange400 py-[10px] px-[18px] rounded-tr-full rounded-br-full">
+              <Link
+                to="/resume"
+                className={location.pathname === "/resume" ? "active" : ""}
+              >
+                Resume
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Right: Contact Link */}
+        <button
+          onClick={() => setIsContactOpen(true)}
+          className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg"
+        >
+          Contact Oluwatoyin
+        </button>
+      </nav>
+      <div className="hidden md:block w-full">
+        <hr className="border-t border-orange200 w-full" />
+      </div>
+      {/* Mobile View */}
+      <nav className="md:hidden w-[90%] mx-auto py-4 px-2 flex justify-between items-center">
+        <div>
+          <Logo />
+        </div>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center gap-1 text-sm absolute z-20 bg-white rounded-[50px] p-3"
+          style={{
+            top: "500px",
+            right: "20%",
+            transform: "translate(50%, -50%)",
+          }}
+        >
+          <img src={isOpen ? Close : Menu} alt="menu" />
+          <span>{isOpen ? "CLOSE" : "MENU"}</span>
+        </button>
+
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -48,11 +107,11 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="menu fixed inset-0 z-50 overflow-auto bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4"
+              className="menu fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4"
             >
               <motion.ul
                 variants={modal}
-                className="flex flex-col gap-6 w-[90%] bg-white rounded-[32px] py-6 px-5"
+                className="flex flex-col gap-6 w-[90%] bg-white rounded-[32px] py-6 px-5 relative z-20"
               >
                 <li>
                   <Link
@@ -97,20 +156,14 @@ export default function Header() {
                   </Link>
                 </li>
               </motion.ul>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="ml-52 flex items-center gap-1 text-sm relative z-10 bg-white rounded-[50px] p-3"
-              >
-                <img src={Close} alt="close" />
-                <span>CLOSE</span>
-              </button>
             </motion.div>
           )}
         </AnimatePresence>
+
+        {isContactOpen && (
+          <Contact isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
+        )}
       </nav>
-      {isContactOpen && (
-        <Contact isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
-      )}
     </header>
   );
 }

@@ -26,7 +26,7 @@ export default function CustomSection({ number, title, className, children }) {
     }
   }, [controls, inView]);
   return (
-    <section className="mt-10">
+    <section className="mt-10 md:w-[90%] mx-auto">
       <motion.div
         ref={ref}
         variants={sectionVariants}

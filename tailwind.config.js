@@ -8,6 +8,7 @@ export default {
         orange100: "#FFECDD",
         orange200: "#C2B3A8",
         orange300: "#F0D0B8",
+        orange400: "#C0BCB8",
         primaryBlack: "#131211",
         black100: "#464646",
         black200: "#E4E4E4",

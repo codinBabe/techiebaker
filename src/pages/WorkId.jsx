@@ -78,6 +78,7 @@ export default function WorkIdPage() {
             title={work.title}
             projectType={work.projectType}
             imgsrc={work.imgsrc}
+            imgsrclg={work.imgsrclg}
             workId={work.id}
             onView={handleProjectView}
           >

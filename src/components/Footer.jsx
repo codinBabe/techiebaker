@@ -13,12 +13,16 @@ export default function Footer() {
   }
 
   return (
-    <footer className="w-[90%] mx-auto mt-14">
+    <footer className="w-[90%] mx-auto mt-14 md:mt-28">
       <AnimationContainer>
-        <div className="flex flex-col items-center">
-          <div className="text-center">
-            <h2 className="text-[28px] font-helvetica-medium">
+        <div className="flex flex-col items-center text-center">
+          <div className="max-w-lg md:max-w-xl lg:max-w-3xl">
+            <h2 className="block md:hidden text-[28px] md:text-[40px] font-helvetica-medium leading-tight">
               Let us work together on your next project or product
+            </h2>
+            <h2 className="hidden md:block text-[28px] md:text-[40px] font-helvetica-medium leading-tight">
+              Let us work together on your next <br />
+              project or product
             </h2>
             <p className="my-5">
               Bringing your ideas and products from conceptualisation to reality
@@ -26,18 +30,23 @@ export default function Footer() {
             </p>
             <button
               onClick={sendEmail}
-              className="bg-white w-full text-primaryOrange border border-primaryOrange rounded-lg py-2 px-4"
+              className="bg-white w-full md:w-40 text-primaryOrange border border-primaryOrange rounded-lg py-[14px] px-3"
             >
               Send an email
             </button>
           </div>
-          <div className="flex flex-col gap-6 items-center mt-14">
+          <div className="hidden md:block w-full mt-14 md:mt-24">
+            <hr className="border-t border-orange200 w-[calc(100% + 2rem)] -mx-16" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-60 mt-10">
             <div className="flex flex-col items-center">
               <div>
                 <img src={Logo} alt="logo" />
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center mt-1">
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="mailto:oluwatoyinoredein@gmail.com"
                   className="text-sm mr-2"
                 >
@@ -45,17 +54,26 @@ export default function Footer() {
                 </a>
                 <span className="text-sm mr-2">|</span>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://linkedin.com/in/oluwatoyin_oredein"
                   className="text-sm mr-2"
                 >
                   LinkedIn
                 </a>
                 <span className="text-sm mr-2">|</span>
-                <a href="https://github.com/codinBabe" className="text-sm mr-2">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/codinBabe"
+                  className="text-sm mr-2"
+                >
                   GitHub
                 </a>
                 <span className="text-sm mr-2">|</span>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href="https://twitter.com/techiebaker"
                   className="text-sm mr-2"
                 >
@@ -83,14 +101,16 @@ export default function Footer() {
 
             <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-primaryOrange border-2 text-white text-sm px-5 py-3 rounded-lg"
+              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg"
             >
               Contact Oluwatoyin
             </button>
           </div>
-          <p className="text-center my-5 text-sm">
+          <p className="text-center my-5 md:mt-10 md:mb-8 text-sm">
             Designed by{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://twitter.com/"
               className="underline font-helvetica-medium"
             >
@@ -98,6 +118,8 @@ export default function Footer() {
             </a>{" "}
             and developed by{" "}
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://twitter.com/techiebaker"
               className="underline font-helvetica-medium"
             >

@@ -2,13 +2,17 @@ import MovieBox from "../assets/iPhone 11 Pro Mockup.png";
 import QuickLingo from "../assets/iPhone 12 Mockup.png";
 import ByeWind from "../assets/iPhone 11 Pro Max Mockup.png";
 import Pizzon from "../assets/iPhone 15 Pro Portrait Mockup.png";
-
+import MovieBoxLg from "../assets/MacBook Pro Mockup on the Table.png";
+import QuickLingoLg from "../assets/iPad Pro 12.9-inch Space Gray Mockup.png";
+import ByeWindLg from "../assets/MacBook Pro Mockup Right View.png";
+import PizzonLg from "../assets/Studio Display Front View Mockup.png";
 const Works = [
   {
     id: 1,
-    title: "Development of a web app Movie Box",
+    title: "A Movie Box Web App",
     projectType: "Web App • Personal Project",
     imgsrc: MovieBox,
+    imgsrclg: MovieBoxLg,
     text: "REACT JS, TAILWIND CSS, API",
     githubUrl: "https://github.com/codinBabe/movie-box.git",
     liveProjectUrl: "https://movie-box-indol.vercel.app/",
@@ -18,6 +22,7 @@ const Works = [
     title: "A Dictionary Web App - Quick Lingo",
     projectType: "Web App • Personal Project",
     imgsrc: QuickLingo,
+    imgsrclg: QuickLingoLg,
     text: "HTML, CSS, JS, API",
     githubUrl: "https://github.com/codinBabe/QuickLingo",
     liveProjectUrl: "https://codinbabe.github.io/QuickLingo/",
@@ -27,6 +32,7 @@ const Works = [
     title: "A Social Dashboard Template - ByeWind",
     projectType: "Web App • Personal Project",
     imgsrc: ByeWind,
+    imgsrclg: ByeWindLg,
     text: "HTML, CSS, JS",
     githubUrl: "https://github.com/codinBabe/ByeWind",
     liveProjectUrl: "https://bye-wind.vercel.app/",
@@ -36,6 +42,7 @@ const Works = [
     title: "A Pizza Ordering Web App - Pizzon",
     projectType: "Web App • Personal Project",
     imgsrc: Pizzon,
+    imgsrclg: PizzonLg,
     text: "NEXT JS, TAILWIND CSS, API",
     githubUrl: "https://github.com/codinBabe/flit-pizza-ordering-app",
     liveProjectUrl: "",

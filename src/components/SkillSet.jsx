@@ -16,6 +16,9 @@ export default function SkillSet({ className }) {
             <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
               Javascript
             </p>
+            <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+              Typescript
+            </p>
           </div>
         </div>
         <div className="md:flex md:items-center md:gap-[135px]">
