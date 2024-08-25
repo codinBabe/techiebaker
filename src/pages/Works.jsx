@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import CustomSection from "../components/CustomSection";
 import WorkCard from "../components/WorkCard";
 import Works from "../utils/Works";
+import Confetti from "react-confetti";
+import { useWindowSize } from "../hooks/WindowSize"; // Or use your custom hook if you prefer
 
 export default function WorksPage() {
   const [projectsViewed, setProjectsViewed] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     const viewedCount = localStorage.getItem("projectsViewed");
@@ -12,6 +16,17 @@ export default function WorksPage() {
       setProjectsViewed(parseInt(viewedCount));
     }
   }, []);
+
+  useEffect(() => {
+    if (projectsViewed >= 2) {
+      setShowConfetti(true);
+      const confettiTimer = setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000); // Remove confetti after 5 seconds
+
+      return () => clearTimeout(confettiTimer);
+    }
+  }, [projectsViewed]);
 
   function handleProjectView() {
     const newCount = projectsViewed + 1;
@@ -21,6 +36,15 @@ export default function WorksPage() {
 
   return (
     <CustomSection title={"Works"}>
+      {showConfetti && (
+        <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={500}
+          gravity={0.5}
+          recycle={false}
+        />
+      )}
       <p>
         {projectsViewed < 2
           ? `View ${2 - projectsViewed} projects to win a free cupcake`
