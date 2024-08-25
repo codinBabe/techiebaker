@@ -52,7 +52,7 @@ export default function AboutPage() {
       <AboutCard
         number={"03"}
         text={"WHAT I CAN DO FOR YOU"}
-        clsname={"md:mt-5 md:ml-[-90px]"}
+        clsname={"md:mt-5 md:ml-[-85px]"}
       >
         <AnimationContainer>
           <div className="text-lg">
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <AboutCard
         number={"04"}
         text={"WHERE I CAN WORK"}
-        clsname={"md:mt-5 md:ml-[-50px]"}
+        clsname={"md:mt-5 md:ml-[-40px]"}
       >
         <AnimationContainer>
           <div className="text-lg">
@@ -110,7 +110,7 @@ export default function AboutPage() {
       <AboutCard
         number={"05"}
         text={"WHAT I STAND FOR"}
-        clsname={"md:mt-5 md:ml-[-40px]"}
+        clsname={"md:mt-5 md:ml-[-30px]"}
       >
         <AnimationContainer>
           <div className="text-lg">
@@ -154,7 +154,7 @@ export default function AboutPage() {
       <AboutCard
         number={"06"}
         text={"MY MANTRA"}
-        clsname={"md:mt-5 md:ml-[10px]"}
+        clsname={"md:mt-5 md:ml-[22px]"}
       >
         <AnimationContainer>
           <div className="text-lg">
@@ -190,7 +190,7 @@ export default function AboutPage() {
       <AboutCard
         number={"07"}
         text={"OLUWATOYIN'S SKILLS"}
-        clsname={"md:mt-5 md:ml-[-70px]"}
+        clsname={"md:mt-5 md:ml-[-60px]"}
       >
         <AnimationContainer>
           <div className="flex flex-col gap-5">
@@ -255,7 +255,7 @@ export default function AboutPage() {
       <AboutCard
         number={"08"}
         text={"MY SUPER POWERS"}
-        clsname={"md:mt-5 md:ml-[-50px]"}
+        clsname={"md:mt-5 md:ml-[-35px]"}
       >
         <AnimationContainer>
           <div className="text-lg">
