@@ -13,7 +13,7 @@ export default function AboutPage() {
       <AboutCard
         number={"01"}
         text={"WHO IS OLUWATOYIN?"}
-        clsname={"md:mt-5 md:ml-[-60px]"}
+        clsname={"md:mt-5 md:ml-[-65px]"}
       >
         <AnimationContainer>
           <p className="text-lg">

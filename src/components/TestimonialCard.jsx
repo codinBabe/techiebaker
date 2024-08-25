@@ -23,7 +23,7 @@ export default function TestimonialCard() {
       <p className="md:text-2xl">{testimonials[currentIndex].content}</p>
       <div className="flex items-center gap-2 mt-4">
         <div className="rounded-full w-12 h-12">
-          <img src={""} alt="icon" />
+          <img src={testimonials[currentIndex].src} alt="icon" />
         </div>
         <div className="">
           <p className="text-base text-primaryBlack font-helvetica-medium">
