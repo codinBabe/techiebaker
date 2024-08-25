@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../utils/icons/Logo";
 import Menu from "../assets/menu.svg";
 import Close from "../assets/clear.svg";
+import Tick from "../assets/tick-icon.svg";
 import { Link, useLocation } from "react-router-dom";
 import Contact from "./Contact";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,6 +25,7 @@ export default function Header() {
       transition: { delay: 0.5 },
     },
   };
+
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
@@ -36,35 +38,63 @@ export default function Header() {
         </div>
         <div>
           <ul className="flex items-center">
-            <li className="border border-orange400 py-[10px] px-[20px] rounded-tl-full rounded-bl-full">
+            <li>
               <Link
                 to="/"
-                className={location.pathname === "/" ? "active" : ""}
+                className={`${
+                  location.pathname === "/"
+                    ? "bg-orange300 font-helvetica-medium text-primaryBlack"
+                    : "bg-none font-helvetica-regular text-black100"
+                } py-[10px] px-[20px] border border-orange400 rounded-tl-full rounded-bl-full flex items-center gap-2`}
               >
+                {location.pathname === "/" && (
+                  <img src={Tick} alt="tick" className="w-4 h-4" />
+                )}
                 Home
               </Link>
             </li>
-            <li className="border border-orange400 py-[10px] px-[12px]">
+            <li>
               <Link
                 to="/works"
-                className={location.pathname.includes("/works") ? "active" : ""}
+                className={`${
+                  location.pathname.includes("/works")
+                    ? "bg-orange300 font-helvetica-medium text-primaryBlack"
+                    : "bg-none font-helvetica-regular text-black100"
+                } py-[10px] px-[16px] border border-orange400 flex items-center gap-2`}
               >
+                {location.pathname.includes("/works") && (
+                  <img src={Tick} alt="tick" className="w-4 h-4" />
+                )}
                 Works
               </Link>
             </li>
-            <li className="border border-orange400 py-[10px] px-[12px]">
+            <li>
               <Link
                 to="/about"
-                className={location.pathname === "/about" ? "active" : ""}
+                className={`${
+                  location.pathname === "/about"
+                    ? "bg-orange300 font-helvetica-medium text-primaryBlack"
+                    : "bg-none font-helvetica-regular text-black100"
+                } py-[10px] px-[16px] border border-orange400 flex items-center gap-2`}
               >
+                {location.pathname === "/about" && (
+                  <img src={Tick} alt="tick" className="w-4 h-4" />
+                )}
                 About
               </Link>
             </li>
-            <li className="border border-orange400 py-[10px] px-[18px] rounded-tr-full rounded-br-full">
+            <li>
               <Link
                 to="/resume"
-                className={location.pathname === "/resume" ? "active" : ""}
+                className={`${
+                  location.pathname === "/resume"
+                    ? "bg-orange300 font-helvetica-medium text-primaryBlack"
+                    : "bg-none font-helvetica-regular text-black100"
+                } py-[10px] px-[18px] border border-orange400 rounded-tr-full rounded-br-full flex items-center gap-2`}
               >
+                {location.pathname === "/resume" && (
+                  <img src={Tick} alt="tick" className="w-4 h-4" />
+                )}
                 Resume
               </Link>
             </li>
@@ -89,7 +119,7 @@ export default function Header() {
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 text-sm absolute z-20 bg-white rounded-[50px] p-3"
+          className="flex items-center gap-1 text-sm absolute z-20 bg-white rounded-[50px] p-3 animate-glow"
           style={{
             top: "500px",
             right: "20%",
@@ -107,63 +137,95 @@ export default function Header() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="menu fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4"
+              className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4"
             >
               <motion.ul
                 variants={modal}
-                className="flex flex-col gap-6 w-[90%] bg-white rounded-[32px] py-6 px-5 relative z-20"
+                className="flex flex-col gap-6 w-[80%] bg-white rounded-[32px] py-6 pr-5 pl-7 relative z-20"
               >
                 <li>
                   <Link
                     to="/"
-                    className={location.pathname === "/" ? "active" : ""}
+                    className={`${
+                      location.pathname === "/"
+                        ? "bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
+                        : "bg-none font-helvetica-regular text-black100"
+                    } flex items-center justify-between`}
                   >
                     Home
+                    {location.pathname === "/" && (
+                      <img src={Tick} alt="tick" className="w-4 h-4" />
+                    )}
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/works"
-                    className={
-                      location.pathname.includes("/works") ? "active" : ""
-                    }
+                    className={`${
+                      location.pathname === "/works"
+                        ? "bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
+                        : "bg-none font-helvetica-regular text-black100"
+                    } flex items-center justify-between`}
                   >
                     Works
+                    {location.pathname === "/works" && (
+                      <img src={Tick} alt="tick" className="w-4 h-4" />
+                    )}
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/about"
-                    className={location.pathname === "/about" ? "active" : ""}
+                    className={`${
+                      location.pathname === "/about"
+                        ? "w-full bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
+                        : "bg-none font-helvetica-regular text-black100"
+                    } flex items-center justify-between`}
                   >
                     About
+                    {location.pathname === "/about" && (
+                      <img src={Tick} alt="tick" className="w-4 h-4" />
+                    )}
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/resume"
-                    className={location.pathname === "/resume" ? "active" : ""}
+                    className={`${
+                      location.pathname === "/resume"
+                        ? "w-full bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
+                        : "bg-none font-helvetica-regular text-black100"
+                    } flex items-center justify-between`}
                   >
                     Resume
+                    {location.pathname === "/resume" && (
+                      <img src={Tick} alt="tick" className="w-4 h-4" />
+                    )}
                   </Link>
                 </li>
                 <li>
                   <Link
                     onClick={() => setIsContactOpen(true)}
-                    className={location.pathname === "/contact" ? "active" : ""}
+                    className={`${
+                      location.pathname === "/contact"
+                        ? "w-full bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
+                        : "bg-none font-helvetica-regular text-black100"
+                    } flex items-center justify-between`}
                   >
                     Contact Oluwatoyin
+                    {location.pathname === "/contact" && (
+                      <img src={Tick} alt="tick" className="w-4 h-4" />
+                    )}
                   </Link>
                 </li>
               </motion.ul>
             </motion.div>
           )}
         </AnimatePresence>
-
-        {isContactOpen && (
-          <Contact isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
-        )}
       </nav>
+      {isContactOpen && (
+        <Contact isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
+      )}
     </header>
   );
 }

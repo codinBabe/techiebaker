@@ -3,6 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 10px #F67D1F, 0 0 20px #464646" },
+          "50%": { boxShadow: "0 0 20px #F67D1F, 0 0 20px #131211" },
+        },
+      },
+      animation: {
+        glow: "glow 1.5s infinite linear",
+      },
       colors: {
         primaryOrange: "#F67D1F",
         orange100: "#FFECDD",

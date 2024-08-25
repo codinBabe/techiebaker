@@ -20,7 +20,7 @@ export default function TestimonialCard() {
   return (
     <>
       <h3 className="mb-2 text-sm">{testimonials[currentIndex].org}</h3>
-      <p>{testimonials[currentIndex].content}</p>
+      <p className="md:text-2xl">{testimonials[currentIndex].content}</p>
       <div className="flex items-center gap-2 mt-4">
         <div className="rounded-full w-12 h-12">
           <img src={""} alt="icon" />
@@ -34,12 +34,12 @@ export default function TestimonialCard() {
           </p>
         </div>
       </div>
-      <div className="flex items-center gap-6 justify-end mt-4">
+      <div className="flex items-center gap-6 mt-4 absolute top-0 right-4 transform">
         <button onClick={handlePrev}>
-          <img src={ArrowLeft} alt="icon" />
+          <img src={ArrowLeft} alt="icon" className="w-4 h-4" />
         </button>
         <button onClick={handleNext}>
-          <img src={ArrowRight} alt="icon" />
+          <img src={ArrowRight} alt="icon" className="w-4 h-4" />
         </button>
       </div>
     </>

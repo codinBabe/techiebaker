@@ -6,7 +6,7 @@ export default function SkillSet({ className }) {
       <div className={className}>
         <div className="md:flex items-center gap-[120px]">
           <h3 className="text-sm mb-2">LANGUAGES</h3>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-wrap">
             <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
               C
             </p>

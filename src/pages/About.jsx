@@ -6,7 +6,7 @@ import AnimationContainer from "../utils/AnimationContainer";
 export default function AboutPage() {
   return (
     <>
-      <h1 className="font-fraunces font-semibold text-[22px] mb-1">
+      <h1 className="font-fraunces font-semibold text-[22px] mb-1 md:mt-20">
         About Oluwatoyin OREDEIN
       </h1>
       <p>Let’s rock and roll</p>

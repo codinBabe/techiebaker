@@ -30,10 +30,15 @@ export default function WorkCard({
         <div className="mt-5 flex justify-end">
           <img
             src={imgsrc}
-            srcSet={`${imgsrclg} 1024w, ${imgsrc} 375w`}
-            sizes="(max-width: 768px) 640px, 1024px"
             alt={title}
-            className="w-[90%] object-cover"
+            loading="lazy"
+            className="object-cover w-[90%] block md:hidden"
+          />
+          <img
+            src={imgsrclg}
+            alt={title}
+            loading="lazy"
+            className="object-cover w-[90%] hidden md:block"
           />
         </div>
       </div>

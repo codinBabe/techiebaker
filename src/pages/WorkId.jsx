@@ -5,9 +5,9 @@ import ExternalLink from "../assets/fi_external-link.svg";
 import WorkCard from "../components/WorkCard";
 import { useEffect, useState } from "react";
 export default function WorkIdPage() {
-  const { workId } = useParams();
+  const { id } = useParams();
   const [projectsViewed, setProjectsViewed] = useState(0);
-  const work = Works.find((work) => work.id === parseInt(workId));
+  const work = Works.find((work) => work.id === parseInt(id, 10));
 
   useEffect(() => {
     const viewedCount = localStorage.getItem("projectsViewed");
@@ -24,7 +24,10 @@ export default function WorkIdPage() {
 
   return (
     <>
-      <a className="flex items-center gap-2 text-black100" href="/works">
+      <a
+        className="flex items-center gap-2 text-black100 md:mt-20"
+        href="/works"
+      >
         <span>
           <img src={ArrowLeft} alt="icon" />
         </span>
@@ -72,19 +75,21 @@ export default function WorkIdPage() {
       </section>
       <section>
         <h2 className="font-fraunces text-2xl font-semibold">Related works</h2>
-        {Works.slice(2, 4).map((work) => (
-          <WorkCard
-            key={work.id}
-            title={work.title}
-            projectType={work.projectType}
-            imgsrc={work.imgsrc}
-            imgsrclg={work.imgsrclg}
-            workId={work.id}
-            onView={handleProjectView}
-          >
-            <p>{work.text}</p>
-          </WorkCard>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {Works.slice(2, 4).map((work) => (
+            <WorkCard
+              key={work.id}
+              title={work.title}
+              projectType={work.projectType}
+              imgsrc={work.imgsrc}
+              imgsrclg={work.imgsrclg}
+              workId={work.id}
+              onView={handleProjectView}
+            >
+              <p>{work.text}</p>
+            </WorkCard>
+          ))}
+        </div>
         <div className="underline text-lg text-center font-helvetica-medium mt-5">
           <a href="/works">See all works</a>
         </div>

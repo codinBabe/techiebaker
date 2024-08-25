@@ -36,9 +36,6 @@ section {
 div.menu ul li {
   @apply text-black100;
 }
-div.menu ul li > .active {
-  @apply block w-full bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium;
-}
 div.contact-icons > a {
   @apply flex flex-col items-center gap-2;
 }

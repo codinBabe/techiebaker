@@ -95,7 +95,7 @@ export default function HomePage() {
           <div className="block md:flex gap-32">
             <p className="mb-1 whitespace-nowrap">WHO IS OLUWATOYIN?</p>
             <div>
-              <p className="mb-2">
+              <p className="mb-2 md:text-xl">
                 <span className="font-helvetica-medium">
                   Oluwatoyin OREDEIN
                 </span>{" "}
@@ -117,7 +117,7 @@ export default function HomePage() {
       <CustomSection
         number={"03"}
         title={"Feedbacks"}
-        className={"bg-blue100 pt-8 pb-4 px-5 rounded-2xl"}
+        className={"bg-blue100 pt-8 pb-4 px-5 rounded-2xl relative"}
       >
         <TestimonialCard />
       </CustomSection>

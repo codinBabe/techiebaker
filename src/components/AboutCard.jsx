@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-export default function AboutCard({ number, text, children }) {
+export default function AboutCard({ number, text, children, clsname }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -38,9 +38,9 @@ export default function AboutCard({ number, text, children }) {
         <div className="bg-primaryOrange w-[48px] py-1 px-2 text-white rounded-r-2xl">
           {number}
         </div>
-        <h2>{text}</h2>
+        <h2 className="md:whitespace-nowrap">{text}</h2>
       </motion.div>
-      <div>{children}</div>
+      <div className={clsname}>{children}</div>
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="hidden md:block w-full mt-14 md:mt-24">
             <hr className="border-t border-orange200 w-[calc(100% + 2rem)] -mx-16" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-60 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-52 mt-10">
             <div className="flex flex-col items-center">
               <div>
                 <img src={Logo} alt="logo" />
