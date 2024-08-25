@@ -119,7 +119,7 @@ export default function Header() {
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 text-sm absolute z-20 bg-white rounded-[50px] p-3 animate-glow"
+          className="flex items-center gap-1 text-sm fixed z-20 bg-white rounded-[50px] p-3 animate-glow"
           style={{
             top: "500px",
             right: "20%",

@@ -48,7 +48,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="mailto:oluwatoyinoredein@gmail.com"
-                  className="text-sm mr-2"
+                  className="text-sm mr-2 hover:underline"
                 >
                   Email
                 </a>
@@ -57,7 +57,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://linkedin.com/in/oluwatoyin_oredein"
-                  className="text-sm mr-2"
+                  className="text-sm mr-2 hover:underline"
                 >
                   LinkedIn
                 </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/codinBabe"
-                  className="text-sm mr-2"
+                  className="text-sm mr-2 hover:underline"
                 >
                   GitHub
                 </a>
@@ -75,33 +75,33 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://twitter.com/techiebaker"
-                  className="text-sm mr-2"
+                  className="text-sm mr-2 hover:underline"
                 >
                   Twitter
                 </a>
               </div>
             </div>
             <div className="flex items-center">
-              <Link to="/" className="mr-2">
+              <Link to="/" className="mr-2 hover:underline">
                 Home
               </Link>
               <span className="text-sm mr-2">|</span>
-              <Link to="/works" className="mr-2">
+              <Link to="/works" className="mr-2 hover:underline">
                 Works
               </Link>
               <span className="text-sm mr-2">|</span>
-              <Link to="/about" className="mr-2">
+              <Link to="/about" className="mr-2 hover:underline">
                 About
               </Link>
               <span className="text-sm mr-2">|</span>
-              <Link to="/resume" className="mr-2">
+              <Link to="/resume" className="mr-2 hover:underline">
                 Resume
               </Link>
             </div>
 
             <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg"
+              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg md:w-[65%]"
             >
               Contact Oluwatoyin
             </button>

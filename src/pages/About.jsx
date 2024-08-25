@@ -10,7 +10,11 @@ export default function AboutPage() {
         About Oluwatoyin OREDEIN
       </h1>
       <p>Let’s rock and roll</p>
-      <AboutCard number={"01"} text={"WHO IS OLUWATOYIN?"}>
+      <AboutCard
+        number={"01"}
+        text={"WHO IS OLUWATOYIN?"}
+        clsname={"md:mt-5 md:ml-[-60px]"}
+      >
         <AnimationContainer>
           <p className="text-lg">
             <span className="font-helvetica-bold">Oluwatoyin OREDEIN</span> is a
@@ -23,7 +27,11 @@ export default function AboutPage() {
           </p>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"02"} text={"TOYIN'S JOURNEY"}>
+      <AboutCard
+        number={"02"}
+        text={"TOYIN'S JOURNEY"}
+        clsname={"md:mt-5 md:ml-[-30px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <h2 className="text-[22px]">Self learning</h2>
@@ -41,7 +49,11 @@ export default function AboutPage() {
         </AnimationContainer>
         <Education />
       </AboutCard>
-      <AboutCard number={"03"} text={"WHAT I CAN DO FOR YOU"}>
+      <AboutCard
+        number={"03"}
+        text={"WHAT I CAN DO FOR YOU"}
+        clsname={"md:mt-5 md:ml-[-90px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <div className="mb-6">
@@ -65,7 +77,11 @@ export default function AboutPage() {
           </div>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"04"} text={"WHERE I CAN WORK"}>
+      <AboutCard
+        number={"04"}
+        text={"WHERE I CAN WORK"}
+        clsname={"md:mt-5 md:ml-[-50px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <div className="flex items-center gap-3 mb-2">
@@ -91,14 +107,18 @@ export default function AboutPage() {
           </div>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"05"} text={"WHAT I STAND FOR"}>
+      <AboutCard
+        number={"05"}
+        text={"WHAT I STAND FOR"}
+        clsname={"md:mt-5 md:ml-[-40px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <div className="mb-6">
               <h2 className="text-2xl font-helvetica-medium">Resilence</h2>
               <p>
                 As a mother of a child who is not up to 3 years, I was able to
-                beat all odds to start self-learning, applied for an got into
+                beat all odds to start self-learning, applied for and got into
                 Women Techsters Fellowship program and graduated top 10% of the
                 class.
               </p>
@@ -131,7 +151,11 @@ export default function AboutPage() {
           </div>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"06"} text={"MY MANTRA"}>
+      <AboutCard
+        number={"06"}
+        text={"MY MANTRA"}
+        clsname={"md:mt-5 md:ml-[10px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <div className="flex items-center gap-3 mb-2">
@@ -163,7 +187,11 @@ export default function AboutPage() {
           </div>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"07"} text={"OLUWATOYIN'S SKILLS"}>
+      <AboutCard
+        number={"07"}
+        text={"OLUWATOYIN'S SKILLS"}
+        clsname={"md:mt-5 md:ml-[-70px]"}
+      >
         <AnimationContainer>
           <div className="flex flex-col gap-5">
             <div>
@@ -224,7 +252,11 @@ export default function AboutPage() {
           </div>
         </AnimationContainer>
       </AboutCard>
-      <AboutCard number={"08"} text={"MY SUPER POWERS"}>
+      <AboutCard
+        number={"08"}
+        text={"MY SUPER POWERS"}
+        clsname={"md:mt-5 md:ml-[-50px]"}
+      >
         <AnimationContainer>
           <div className="text-lg">
             <div className="flex items-center gap-3 mb-2">
