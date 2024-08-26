@@ -9,18 +9,35 @@ import AnimationContainer from "../utils/AnimationContainer";
 
 export default function HomePage() {
   const [projectsViewed, setProjectsViewed] = useState(0);
+  const [viewedProjects, setViewedProjects] = useState([]);
 
   useEffect(() => {
     const viewedCount = localStorage.getItem("projectsViewed");
+    const viewedProjectsIds = localStorage.getItem("viewedProjects");
+
     if (viewedCount) {
       setProjectsViewed(parseInt(viewedCount));
     }
+
+    if (viewedProjectsIds) {
+      setViewedProjects(JSON.parse(viewedProjectsIds));
+    }
   }, []);
 
-  function handleProjectView() {
-    const newCount = projectsViewed + 1;
-    setProjectsViewed(newCount);
-    localStorage.setItem("projectsViewed", newCount);
+  function handleProjectView(workId) {
+    if (!viewedProjects.includes(workId)) {
+      const newCount = projectsViewed + 1;
+      const updatedViewedProjects = [...viewedProjects, workId];
+
+      setProjectsViewed(newCount);
+      setViewedProjects(updatedViewedProjects);
+
+      localStorage.setItem("projectsViewed", newCount);
+      localStorage.setItem(
+        "viewedProjects",
+        JSON.stringify(updatedViewedProjects)
+      );
+    }
   }
   return (
     <>
@@ -80,7 +97,7 @@ export default function HomePage() {
               imgsrc={work.imgsrc}
               imgsrclg={work.imgsrclg}
               workId={work.id}
-              onView={handleProjectView}
+              onView={() => handleProjectView(work.id)}
             >
               <p>{work.text}</p>
             </WorkCard>
