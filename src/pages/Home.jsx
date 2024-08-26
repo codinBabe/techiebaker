@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <>
       <AnimationContainer>
-        <h1 className="text-4xl flex flex-col gap-3 md:mt-20 md:text-[80px] md:leading-tight md:justify-center md:flex-row ">
+        <h1 className="text-4xl flex flex-col gap-3 md:mt-40 md:text-[80px] md:leading-tight md:justify-center md:flex-row ">
           <span className="font-fraunces font-bold">Oluwatoyin</span>
           <span>OREDEIN</span>
         </h1>

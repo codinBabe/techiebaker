@@ -34,7 +34,7 @@ export default function WorksPage() {
   }
 
   return (
-    <CustomSection title={"Works"}>
+    <CustomSection title={"Works"} titleCls={"md:mt-40"}>
       {showConfetti && (
         <Confetti
           width={width}

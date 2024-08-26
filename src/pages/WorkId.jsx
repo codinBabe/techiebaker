@@ -25,7 +25,7 @@ export default function WorkIdPage() {
   return (
     <>
       <a
-        className="flex items-center gap-2 text-black100 md:mt-20"
+        className="flex items-center gap-2 text-black100 md:mt-40"
         href="/works"
       >
         <span>

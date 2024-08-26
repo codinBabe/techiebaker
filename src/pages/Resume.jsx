@@ -11,7 +11,7 @@ export default function Resume() {
   return (
     <>
       <AnimationContainer>
-        <section className="md:mt-20">
+        <section className="md:mt-40">
           <a
             className="flex items-center gap-2"
             href={OluwatoyinResume}

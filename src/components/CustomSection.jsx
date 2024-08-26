@@ -2,7 +2,13 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
-export default function CustomSection({ number, title, className, children }) {
+export default function CustomSection({
+  number,
+  title,
+  titleCls,
+  className,
+  children,
+}) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -34,7 +40,9 @@ export default function CustomSection({ number, title, className, children }) {
         animate={controls}
       >
         <p>{number}</p>
-        <h2 className="font-fraunces font-semibold text-2xl mb-2">{title}</h2>
+        <h2 className={`font-fraunces font-semibold text-2xl mb-2 ${titleCls}`}>
+          {title}
+        </h2>
       </motion.div>
       <div className={className}>{children}</div>
     </section>
