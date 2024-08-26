@@ -111,7 +111,7 @@ export default function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://twitter.com/"
+              href="https://x.com/dareytemy"
               className="underline font-helvetica-medium"
             >
               Isaac
