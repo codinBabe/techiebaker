@@ -48,6 +48,8 @@ export default function Resume() {
             <div className="flex items-center gap-8">
               <h2>Email:</h2>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="mailto:oluwatoyinoredein@gmail.com"
                 className="font-helvetica-medium underline"
               >
@@ -57,6 +59,8 @@ export default function Resume() {
             <div className="flex items-center gap-2 md:hidden">
               <h2>LinkedIn:</h2>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/oluwatoyin-oredein"
                 className="font-helvetica-medium underline"
               >
@@ -68,6 +72,8 @@ export default function Resume() {
             <div className="hidden md:flex items-center gap-2">
               <h2>LinkedIn:</h2>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/oluwatoyin-oredein"
                 className="font-helvetica-medium underline"
               >
@@ -77,6 +83,8 @@ export default function Resume() {
             <div className="flex items-center gap-5">
               <h2>GitHub:</h2>
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://github.com/codinBabe"
                 className="font-helvetica-medium underline"
               >
