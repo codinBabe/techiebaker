@@ -29,7 +29,7 @@ body {
   @apply bg-orange100 text-base text-primaryBlack;
 }
 section {
-  background-image: url("/assets/bant-light.svg"), url("/assets/bant-light.svg");
+  background-image: url("/public/bant-light.svg"), url("/public/bant-light.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
   background-size: auto, auto;
