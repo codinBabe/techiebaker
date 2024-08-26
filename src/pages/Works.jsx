@@ -3,7 +3,7 @@ import CustomSection from "../components/CustomSection";
 import WorkCard from "../components/WorkCard";
 import Works from "../utils/Works";
 import Confetti from "react-confetti";
-import { useWindowSize } from "../hooks/WindowSize"; // Or use your custom hook if you prefer
+import { useWindowSize } from "../hooks/WindowSize";
 
 export default function WorksPage() {
   const [projectsViewed, setProjectsViewed] = useState(0);
@@ -22,8 +22,7 @@ export default function WorksPage() {
       setShowConfetti(true);
       const confettiTimer = setTimeout(() => {
         setShowConfetti(false);
-      }, 5000); // Remove confetti after 5 seconds
-
+      }, 5000);
       return () => clearTimeout(confettiTimer);
     }
   }, [projectsViewed]);

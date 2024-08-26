@@ -1,11 +1,11 @@
-import MovieBox from "../assets/iPhone 11 Pro Mockup.png";
-import QuickLingo from "../assets/iPhone 12 Mockup.png";
-import ByeWind from "../assets/iPhone 11 Pro Max Mockup.png";
-import Pizzon from "../assets/iPhone 15 Pro Portrait Mockup.png";
-import MovieBoxLg from "../assets/MacBook Pro Mockup on the Table.png";
-import QuickLingoLg from "../assets/iPad Pro 12.9-inch Space Gray Mockup.png";
-import ByeWindLg from "../assets/MacBook Pro Mockup Right View.png";
-import PizzonLg from "../assets/Studio Display Front View Mockup.png";
+import MovieBox from "../assets/mobile/iPhone 11 Pro Mockup.png";
+import QuickLingo from "../assets/mobile/iPhone 12 Mockup.png";
+import ByeWind from "../assets/mobile/iPhone 11 Pro Max Mockup.png";
+import Pizzon from "../assets/mobile/iPhone 15 Pro Portrait Mockup.png";
+import MovieBoxLg from "../assets/desktop/MacBook Pro Mockup on the Table.png";
+import QuickLingoLg from "../assets/desktop/iPad Pro 12.9-inch Space Gray Mockup.png";
+import ByeWindLg from "../assets/desktop/MacBook Pro Mockup Right View.png";
+import PizzonLg from "../assets/desktop/Studio Display Front View Mockup.png";
 const Works = [
   {
     id: 1,

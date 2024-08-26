@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Logo from "../utils/icons/Logo";
 import Menu from "../assets/menu.svg";
 import Close from "../assets/clear.svg";
@@ -11,6 +11,8 @@ export default function Header() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const menuButtonRef = useRef(null);
+  const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
 
   const backdrop = {
     visible: { opacity: 1 },
@@ -18,17 +20,32 @@ export default function Header() {
   };
 
   const modal = {
-    hidden: { y: "-100vh", opacity: 0 },
+    hidden: {
+      x: buttonPosition.x,
+      y: buttonPosition.y,
+      opacity: 0,
+      scale: 0.8,
+    },
     visible: {
+      x: 0,
       y: 0,
       opacity: 1,
-      transition: { delay: 0.5 },
+      scale: 1,
+      transition: { delay: 0.2, type: "spring", stiffness: 300 },
     },
   };
 
   useEffect(() => {
+    if (menuButtonRef.current) {
+      const rect = menuButtonRef.current.getBoundingClientRect();
+      setButtonPosition({ x: rect.left, y: rect.top });
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
+
   return (
     <header className="relative">
       {/* Desktop View */}
@@ -100,7 +117,6 @@ export default function Header() {
             </li>
           </ul>
         </div>
-
         {/* Right: Contact Link */}
         <button
           onClick={() => setIsContactOpen(true)}
@@ -118,11 +134,12 @@ export default function Header() {
           <Logo />
         </div>
         <button
+          ref={menuButtonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1 text-sm fixed z-20 bg-white rounded-[50px] p-3 animate-glow"
+          className="flex items-center gap-1 text-sm fixed z-20 bg-white rounded-[50px] p-3"
           style={{
-            top: "500px",
-            right: "20%",
+            bottom: "0",
+            right: "60px",
             transform: "translate(50%, -50%)",
           }}
         >
@@ -138,9 +155,13 @@ export default function Header() {
               animate="visible"
               exit="hidden"
               className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4"
+              style={{ justifyContent: "flex-end", paddingBottom: "80px" }}
             >
               <motion.ul
                 variants={modal}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
                 className="flex flex-col gap-6 w-[80%] bg-white rounded-[32px] py-6 pr-5 pl-7 relative z-20"
               >
                 <li>

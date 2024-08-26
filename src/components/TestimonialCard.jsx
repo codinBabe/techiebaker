@@ -19,11 +19,17 @@ export default function TestimonialCard() {
 
   return (
     <>
-      <h3 className="mb-2 text-sm">{testimonials[currentIndex].org}</h3>
+      <h3 className="mb-2 text-sm uppercase">
+        {testimonials[currentIndex].org}
+      </h3>
       <p className="md:text-2xl">{testimonials[currentIndex].content}</p>
       <div className="flex items-center gap-2 mt-4">
-        <div className="rounded-full w-12 h-12">
-          <img src={testimonials[currentIndex].src} alt="icon" />
+        <div className="rounded-full w-12 h-12 overflow-hidden">
+          <img
+            src={testimonials[currentIndex].src}
+            alt="icon"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="">
           <p className="text-base text-primaryBlack font-helvetica-medium">
