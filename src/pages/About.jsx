@@ -127,7 +127,11 @@ export default function AboutPage() {
               <h2 className="text-2xl font-helvetica-medium">Adaptability</h2>
               <p>
                 I have developed a tough skin over the years and I am able to
-                xxxxxxxxxxxxxxx.
+                adapt quickly to new environments, challenges, and technologies.
+                Whether it's learning a new programming language, adjusting to
+                different work cultures, or balancing my personal and
+                professional life, I embrace change and thrive in dynamic
+                situations.
               </p>
             </div>
             <div className="mb-6">
@@ -272,15 +276,15 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-3 mb-2">
               <img src={B} alt="icon" />
-              <p>Product teams</p>
+              <p>I have a sixth sense for missing semicolons.</p>
             </div>
             <div className="flex items-center gap-3 mb-2">
               <img src={B} alt="icon" />
-              <p>Small organisations</p>
+              <p>I can find the perfect meme to explain any bug.</p>
             </div>
             <div className="flex items-center gap-3">
               <img src={B} alt="icon" />
-              <p>Large organisations</p>
+              <p>I am an excellent listener and always ready to learn.</p>
             </div>
           </div>
         </AnimationContainer>
