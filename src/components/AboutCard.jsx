@@ -27,7 +27,7 @@ export default function AboutCard({ number, text, children, clsname }) {
   }, [controls, inView]);
 
   return (
-    <div className="my-4 md:my-10 flex flex-col md:flex-row md:gap-48 md:items-start">
+    <div className="about-card my-4 md:my-10 flex flex-col md:flex-row md:gap-48 md:items-start">
       <motion.div
         ref={ref}
         variants={sectionVariants}
