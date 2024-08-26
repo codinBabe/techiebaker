@@ -30,7 +30,7 @@ body {
 }
 section,
 div.about-card {
-  background-image: url("/public/bant-light.svg"), url("/public/bant-light.svg");
+  background-image: url("/bant-light.svg"), url("/bant-light.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
   background-size: auto, auto;
