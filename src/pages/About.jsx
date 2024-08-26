@@ -23,7 +23,8 @@ export default function AboutPage() {
             curriculums. A baker at night and coder at day. She is passionate
             continuous learner, proactive problem solver, effective team player
             with strong collaborative communication skills. She is currently in
-            her month 8 of the ALX software engineering program.
+            the first month of the Backend Specialization phase of the ALX
+            Software Engineering program..
           </p>
         </AnimationContainer>
       </AboutCard>

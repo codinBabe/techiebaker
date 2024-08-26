@@ -104,8 +104,8 @@ export default function HomePage() {
                 and curriculums. A baker at night and a coder at day. She is a
                 passionate continuous learner, proactive problem solver, and
                 effective team player with strong collaborative communication
-                skills. She is currently in the UTIVA software engineering
-                6-month apprenticeship program.
+                skills. She is currently in the first month of the Backend
+                Specialization phase of the ALX Software Engineering program.
               </p>
               <div className="underline text-lg font-helvetica-medium mt-5">
                 <a href="/about">Know more</a>
