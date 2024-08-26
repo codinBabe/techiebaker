@@ -6,39 +6,11 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
-  function sendEmail() {
-    const recipientEmail = "oluwatoyinoredein@gmail.com";
-    const mailtoUrl = "mailto:" + recipientEmail;
-    window.location.href = mailtoUrl;
-  }
-
   return (
-    <footer className="w-[90%] mx-auto mt-14 md:mt-28">
+    <footer className="w-full mt-14 md:mt-20 md:border-t border-orange200">
       <AnimationContainer>
-        <div className="flex flex-col items-center text-center">
-          <div className="max-w-lg md:max-w-xl lg:max-w-3xl">
-            <h2 className="block md:hidden text-[28px] md:text-[40px] font-helvetica-medium leading-tight">
-              Let us work together on your next project or product
-            </h2>
-            <h2 className="hidden md:block text-[28px] md:text-[40px] font-helvetica-medium leading-tight">
-              Let us work together on your next <br />
-              project or product
-            </h2>
-            <p className="my-5">
-              Bringing your ideas and products from conceptualisation to reality
-              is what I live for.
-            </p>
-            <button
-              onClick={sendEmail}
-              className="bg-white w-full md:w-40 text-primaryOrange border border-primaryOrange rounded-lg py-[14px] px-3"
-            >
-              Send an email
-            </button>
-          </div>
-          <div className="hidden md:block w-full mt-14 md:mt-24">
-            <hr className="border-t border-orange200 w-[calc(100% + 2rem)] -mx-16" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-52 mt-10">
+        <div className="w-[80%] mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-52 mt-10 justify-center">
             <div className="flex flex-col items-center">
               <div>
                 <img src={Logo} alt="logo" />
@@ -101,7 +73,7 @@ export default function Footer() {
 
             <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg md:w-[65%]"
+              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg"
             >
               Contact Oluwatoyin
             </button>
@@ -128,6 +100,7 @@ export default function Footer() {
           </p>
         </div>
       </AnimationContainer>
+
       {isContactOpen && (
         <Contact isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
       )}

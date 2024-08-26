@@ -47,7 +47,14 @@ export default function Header() {
   }, [location.pathname]);
 
   return (
-    <header className="relative">
+    <header
+      className="relative md:bg-orange100 md:border-b border-orange200 md:fixed"
+      style={{
+        top: "0",
+        width: "100%",
+        zIndex: "1000",
+      }}
+    >
       {/* Desktop View */}
       <nav className="hidden md:flex w-[80%] mx-auto py-4 px-2 justify-between items-center">
         <div>
@@ -125,9 +132,7 @@ export default function Header() {
           Contact Oluwatoyin
         </button>
       </nav>
-      <div className="hidden md:block w-full">
-        <hr className="border-t border-orange200 w-full" />
-      </div>
+
       {/* Mobile View */}
       <nav className="md:hidden w-[90%] mx-auto py-4 px-2 flex justify-between items-center">
         <div>
@@ -183,13 +188,13 @@ export default function Header() {
                   <Link
                     to="/works"
                     className={`${
-                      location.pathname === "/works"
+                      location.pathname.includes("/works")
                         ? "bg-orange300 rounded-[50px] py-3 px-3 ml-[-12px] text-primaryBlack font-helvetica-medium"
                         : "bg-none font-helvetica-regular text-black100"
                     } flex items-center justify-between`}
                   >
                     Works
-                    {location.pathname === "/works" && (
+                    {location.pathname.includes("/works") && (
                       <img src={Tick} alt="tick" className="w-4 h-4" />
                     )}
                   </Link>
