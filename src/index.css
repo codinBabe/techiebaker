@@ -29,10 +29,12 @@ body {
   @apply bg-orange100 text-base text-primaryBlack;
 }
 section {
-  background-image: url("./assets/bant\ light.svg");
-  background-repeat: no-repeat;
-  background-position: top right, bottom right;
+  background-image: url("/assets/bant-light.svg"), url("/assets/bant-light.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: auto, auto;
 }
+
 div.menu ul li {
   @apply text-black100;
 }
