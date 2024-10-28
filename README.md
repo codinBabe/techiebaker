@@ -1,8 +1,47 @@
-# React + Vite
+## Oluwatoyin Oredein Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official portfolio website of Oluwatoyin Oredein. This site showcases my projects, skills, and professional journey.
 
-Currently, two official plugins are available:
+### Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [About Me](#about-me)
+- [Projects](#projects)
+- [Skills](#skills)
+- [Contact](#contact)
+
+### About Me
+
+I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. My journey in web development started with a curiosity for how websites are built and has grown into a full-fledged career.
+
+### Projects
+
+Here are some of the projects I have worked on:
+
+- **Period Slay**:
+  A robust full-stack period tracking web app developed with React.js. Key features include user
+  authentication, menstrual cycle prediction, and various additional tools to enhance period
+  management.
+- **ByeWind**:
+  A static Figma dashboard built with HTML, CSS, and JavaScript. It includes a toggle for dark/light
+  mode and uses Chart.js for visualizations, achieving 80% design accuracy.
+- **Cryptify**:
+  A file encryption tool developed in Python, utilizing the Caesar Cipher algorithm for secure file
+  encryption and decryption.
+
+### Skills
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Node.js
+- Python
+- Flask
+- FastAPI
+- devOps
+
+### Contact
+
+Feel free to reach out to me via [teboola2@gmail.com](mailto:teboola2@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/oluwatoyin-oredein).
+
+Thank you for visiting my portfolio website!
