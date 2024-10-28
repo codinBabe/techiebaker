@@ -23,7 +23,7 @@ export default function AboutPage() {
             curriculums. A baker at night and coder at day. She is passionate
             continuous learner, proactive problem solver, effective team player
             with strong collaborative communication skills. She is currently in
-            the first month of the Backend Specialization phase of the ALX
+            her last month of the Backend Specialization phase of the ALX
             Software Engineering program..
           </p>
         </AnimationContainer>
@@ -183,7 +183,7 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-3 mb-2">
               <img src={B} alt="icon" />
-              <p>Code is like humor. When you have to explain it, it’s bad</p>
+              <p>It is possible to do great things from a small place</p>
             </div>
             <div className="flex items-center gap-3">
               <img src={B} alt="icon" />
@@ -235,6 +235,15 @@ export default function AboutPage() {
                 </p>
                 <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
                   NextJs
+                </p>
+                <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+                  Flask
+                </p>
+                <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
+                  Express
+                </p>
+                <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+                  FastAPI
                 </p>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function Header() {
       y: 0,
       opacity: 1,
       scale: 1,
-      transition: { delay: 0.2, type: "spring", stiffness: 300 },
+      transition: { duration: 0.5, ease: "easeInOut" },
     },
   };
 

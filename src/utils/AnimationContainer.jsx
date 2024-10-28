@@ -1,11 +1,11 @@
-import { easeInOut, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 export default function AnimationContainer({ children }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
-  const sectionVariants = {
+  const ContainerVariants = {
     hidden: {
       opacity: 0,
       scale: 0,
@@ -28,7 +28,7 @@ export default function AnimationContainer({ children }) {
   return (
     <motion.div
       ref={ref}
-      variants={sectionVariants}
+      variants={ContainerVariants}
       initial="hidden"
       animate={controls}
     >

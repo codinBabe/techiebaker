@@ -73,7 +73,7 @@ export default function Footer() {
 
             <button
               onClick={() => setIsContactOpen(true)}
-              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg"
+              className="bg-primaryOrange border-2 text-white text-sm px-[12px] py-[14px] rounded-lg md:w-[58%] md:ml-28"
             >
               Contact Oluwatoyin
             </button>

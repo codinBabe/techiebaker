@@ -41,6 +41,15 @@ export default function SkillSet({ className }) {
             <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
               NextJs
             </p>
+            <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+              Flask
+            </p>
+            <p className="bg-blue200 py-1 px-3 rounded-lg font-helvetica-medium">
+              Express
+            </p>
+            <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
+              FastAPI
+            </p>
           </div>
         </div>
         <div className="md:flex md:items-center md:gap-[75px]">

@@ -4,7 +4,7 @@ import AboutCard from "../components/AboutCard";
 import B from "../assets/bforbaker.svg";
 import SkillSet from "../components/SkillSet";
 import Education from "../components/Education";
-import OluwatoyinResume from "../assets/Oluwatoyin_Oredein_Fullstack.CV.pdf";
+import OluwatoyinResume from "../assets/Oluwatoyin_Oredein_FullStack.pdf";
 import AnimationContainer from "../utils/AnimationContainer";
 
 export default function Resume() {
