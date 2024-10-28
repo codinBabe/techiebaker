@@ -12,22 +12,17 @@ export default function HomePage() {
   const [viewedProjects, setViewedProjects] = useState([]);
 
   useEffect(() => {
-    const viewedCount = localStorage.getItem("projectsViewed");
-    const viewedProjectsIds = localStorage.getItem("viewedProjects");
+    const viewedCount = localStorage.getItem("projectsViewed") || "0";
+    const viewedProjectsIds = localStorage.getItem("viewedProjects") || "[]";
 
-    if (viewedCount) {
-      setProjectsViewed(parseInt(viewedCount));
-    }
-
-    if (viewedProjectsIds) {
-      setViewedProjects(JSON.parse(viewedProjectsIds));
-    }
+    setProjectsViewed(parseInt(viewedCount, 10));
+    setViewedProjects(JSON.parse(viewedProjectsIds));
   }, []);
 
-  function handleProjectView(workId) {
+  const handleProjectView = (workId) => {
     if (!viewedProjects.includes(workId)) {
-      const newCount = projectsViewed + 1;
       const updatedViewedProjects = [...viewedProjects, workId];
+      const newCount = updatedViewedProjects.length;
 
       setProjectsViewed(newCount);
       setViewedProjects(updatedViewedProjects);
@@ -38,56 +33,61 @@ export default function HomePage() {
         JSON.stringify(updatedViewedProjects)
       );
     }
-  }
+  };
+
+  const renderProjectMessage = () => {
+    return projectsViewed < 2
+      ? `View ${2 - projectsViewed} projects to win a free cupcake`
+      : "Congratulations! You've won a free cupcake 🧁";
+  };
+
+  const renderDescription = () => (
+    <>
+      <p className="block md:hidden">
+        Full stack developer with a keen ability to craft clean, readable, and
+        scalable code for visually appealing designs and smooth functionality.
+      </p>
+      <p className="hidden md:block text-xl">
+        Full stack developer with a keen ability to craft clean,
+        <br />
+        readable, and scalable code for visually appealing <br />
+        designs and smooth functionality.
+      </p>
+      <p className="block md:hidden">
+        Proficient in object-oriented and asynchronous programming, web
+        development, REST APIs, data structures, and algorithms that contribute
+        to the success of dynamic and innovative projects.
+      </p>
+      <p className="hidden md:block text-xl">
+        Proficient in object-oriented and asynchronous <br />
+        programming, web development, REST APIs, data <br />
+        structures, and algorithms that contribute to the
+        <br /> success of dynamic and innovative projects.
+      </p>
+    </>
+  );
+
   return (
     <>
       <AnimationContainer>
-        <h1 className="text-4xl flex flex-col gap-3 md:mt-40 md:text-[80px] md:leading-tight md:justify-center md:flex-row ">
+        <h1 className="text-4xl flex flex-col gap-3 md:mt-40 md:text-[80px] md:leading-tight md:justify-center md:flex-row">
           <span className="font-fraunces font-bold">Oluwatoyin</span>
           <span>OREDEIN</span>
         </h1>
         <div className="flex items-center md:justify-center gap-1 md:gap-3 my-3 text-black100 whitespace-nowrap">
           <p className="md:text-xl">Software Engineer</p>
           <div className="w-[56px] h-[40px] md:w-[136px] md:h-[96px] rounded-[80px] overflow-hidden">
-            <img
-              src={Oluwatoyin}
-              alt="Oluwatoyin"
-              className="w-full h-auto transform"
-            />
+            <img src={Oluwatoyin} alt="Oluwatoyin" className="w-full h-auto" />
           </div>
           <p className="md:text-xl">Full stack developer</p>
         </div>
         <div className="flex flex-col gap-3 md:gap-8 md:flex-row md:justify-center mt-8">
-          <p className="block md:hidden">
-            Full stack developer with a keen ability to craft clean, readable,
-            and scalable code for visually appealing designs and smooth
-            functionality.
-          </p>
-          <p className="hidden md:block text-xl">
-            Full stack developer with a keen ability to craft clean,
-            <br />
-            readable, and scalable code for visually appealing <br />
-            designs and smooth functionality.
-          </p>
-          <p className="block md:hidden">
-            Proficient in object-oriented and asynchronous programming, web
-            development, REST APIs, data structures, and algorithms that
-            contribute to the success of dynamic and innovative projects.
-          </p>
-          <p className="hidden md:block text-xl">
-            Proficient in object-oriented and asynchronous <br />
-            programming, web development, REST APIs, data <br />
-            structures, and algorithms that contribute to the
-            <br /> success of dynamic and innovative projects.
-          </p>
+          {renderDescription()}
         </div>
       </AnimationContainer>
+
       <CustomSection number={"01"} title={"Works"}>
-        <p>
-          {projectsViewed < 2
-            ? `View ${2 - projectsViewed} projects to win a free cupcake`
-            : "Congratulations! You've won a free cupcake 🧁"}
-        </p>
+        <p>{renderProjectMessage()}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {Works.slice(0, 4).map((work) => (
             <WorkCard
@@ -107,6 +107,7 @@ export default function HomePage() {
           <a href="/works">See all works</a>
         </div>
       </CustomSection>
+
       <CustomSection number={"02"} title={"About Oluwatoyin"}>
         <AnimationContainer>
           <div className="block md:flex gap-32">
@@ -118,7 +119,7 @@ export default function HomePage() {
                 </span>{" "}
                 is the mother of a 2-year-old girl who against all odds started
                 learning software engineering by herself using online resources
-                and curriculums. A baker at night and a coder at day. She is a
+                and curriculums. A baker at night and a coder by day. She is a
                 passionate continuous learner, proactive problem solver, and
                 effective team player with strong collaborative communication
                 skills. She is currently in her last month of the Backend
@@ -131,6 +132,7 @@ export default function HomePage() {
           </div>
         </AnimationContainer>
       </CustomSection>
+
       <CustomSection
         number={"03"}
         title={"Feedbacks"}
@@ -138,6 +140,7 @@ export default function HomePage() {
       >
         <TestimonialCard />
       </CustomSection>
+
       <CustomSection number={"04"} title={"My Skills"}>
         <SkillSet className="flex flex-col gap-5" />
       </CustomSection>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import CustomSection from "../components/CustomSection";
 import WorkCard from "../components/WorkCard";
 import Works from "../utils/Works";
@@ -6,52 +6,52 @@ import Confetti from "react-confetti";
 import { useWindowSize } from "../hooks/WindowSize";
 
 export default function WorksPage() {
-  const [projectsViewed, setProjectsViewed] = useState(0);
+  const [projectsViewed, setProjectsViewed] = useState(() => {
+    const storedCount = localStorage.getItem("projectsViewed");
+    return storedCount ? parseInt(storedCount) : 0;
+  });
+
+  const [viewedProjects, setViewedProjects] = useState(() => {
+    const storedProjects = localStorage.getItem("viewedProjects");
+    return storedProjects ? JSON.parse(storedProjects) : [];
+  });
+
   const [showConfetti, setShowConfetti] = useState(false);
   const { width, height } = useWindowSize();
-  const [viewedProjects, setViewedProjects] = useState([]);
 
   useEffect(() => {
-    const viewedCount = localStorage.getItem("projectsViewed");
-    const viewedProjectsIds = localStorage.getItem("viewedProjects");
+    const hasShownConfetti = localStorage.getItem("hasShownConfetti");
 
-    if (viewedCount) {
-      setProjectsViewed(parseInt(viewedCount));
-    }
-
-    if (viewedProjectsIds) {
-      setViewedProjects(JSON.parse(viewedProjectsIds));
-    }
-  }, []);
-
-  useEffect(() => {
-    if (projectsViewed >= 2) {
+    if (projectsViewed >= 2 && !hasShownConfetti) {
       setShowConfetti(true);
-      const confettiTimer = setTimeout(() => {
-        setShowConfetti(false);
-      }, 5000);
+      localStorage.setItem("hasShownConfetti", "true");
+
+      const confettiTimer = setTimeout(() => setShowConfetti(false), 5000);
       return () => clearTimeout(confettiTimer);
     }
   }, [projectsViewed]);
 
-  function handleProjectView(workId) {
-    if (!viewedProjects.includes(workId)) {
-      const newCount = projectsViewed + 1;
-      const updatedViewedProjects = [...viewedProjects, workId];
+  const handleProjectView = useCallback(
+    (workId) => {
+      if (!viewedProjects.includes(workId)) {
+        const newCount = projectsViewed + 1;
+        const updatedViewedProjects = [...viewedProjects, workId];
 
-      setProjectsViewed(newCount);
-      setViewedProjects(updatedViewedProjects);
+        setProjectsViewed(newCount);
+        setViewedProjects(updatedViewedProjects);
 
-      localStorage.setItem("projectsViewed", newCount);
-      localStorage.setItem(
-        "viewedProjects",
-        JSON.stringify(updatedViewedProjects)
-      );
-    }
-  }
+        localStorage.setItem("projectsViewed", newCount);
+        localStorage.setItem(
+          "viewedProjects",
+          JSON.stringify(updatedViewedProjects)
+        );
+      }
+    },
+    [projectsViewed, viewedProjects]
+  );
 
   return (
-    <CustomSection title={"Works"} titleCls={"md:mt-40"}>
+    <CustomSection title="Works" titleCls="md:mt-40">
       {showConfetti && (
         <Confetti
           width={width}

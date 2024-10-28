@@ -229,7 +229,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h3 className="text-sm mb-2">FRAMEWORKS</h3>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center flex-wrap gap-4">
                 <p className="bg-blue100 py-1 px-3 rounded-lg font-helvetica-medium">
                   ReactJs
                 </p>

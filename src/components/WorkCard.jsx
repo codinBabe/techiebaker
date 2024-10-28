@@ -28,18 +28,15 @@ export default function WorkCard({
           </div>
         </div>
         <div className="mt-5 flex justify-end">
-          <img
-            src={imgsrc}
-            alt={title}
-            loading="lazy"
-            className="object-cover w-[90%] block md:hidden"
-          />
-          <img
-            src={imgsrclg}
-            alt={title}
-            loading="lazy"
-            className="object-cover w-[90%] hidden md:block"
-          />
+          <picture>
+            <source srcSet={imgsrclg} media="(min-width: 768px)" />
+            <img
+              src={imgsrc}
+              alt={title}
+              loading="lazy"
+              className="object-cover w-[90%]"
+            />
+          </picture>
         </div>
       </div>
     </AnimationContainer>
