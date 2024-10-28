@@ -73,7 +73,7 @@ export default function Resume() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href={href}
-                  className="font-helvetica-medium underline"
+                  className="custom-link font-helvetica-medium underline"
                 >
                   {text}
                 </a>

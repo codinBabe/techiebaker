@@ -45,3 +45,6 @@ div.contact-icons > a {
 div.contact-icons > a span:first-child {
   @apply w-14 h-14 bg-orange100 rounded-full p-2 flex items-center justify-center;
 }
+.custom-link {
+  @apply block max-w-full whitespace-nowrap overflow-hidden text-ellipsis;
+}
