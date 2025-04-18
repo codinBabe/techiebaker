@@ -117,13 +117,12 @@ export default function HomePage() {
                 <span className="font-helvetica-medium">
                   Oluwatoyin OREDEIN
                 </span>{" "}
-                is the mother of a 2-year-old girl who against all odds started
+                is the mother of a 3-year-old girl who against all odds started
                 learning software engineering by herself using online resources
                 and curriculums. A baker at night and a coder by day. She is a
                 passionate continuous learner, proactive problem solver, and
                 effective team player with strong collaborative communication
-                skills. She is currently in her last month of the Backend
-                Specialization phase of the ALX Software Engineering program.
+                skills.
               </p>
               <div className="underline text-lg font-helvetica-medium mt-5">
                 <a href="/about">Know more</a>

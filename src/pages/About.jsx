@@ -18,13 +18,11 @@ export default function AboutPage() {
         <AnimationContainer>
           <p className="text-lg">
             <span className="font-helvetica-bold">Oluwatoyin OREDEIN</span> is a
-            mother of a 2-year old girl, who against all odds started learning
+            mother of a 3-year old girl, who against all odds started learning
             software engineering by herself using online resources and
             curriculums. A baker at night and coder at day. She is passionate
             continuous learner, proactive problem solver, effective team player
-            with strong collaborative communication skills. She is currently in
-            her last month of the Backend Specialization phase of the ALX
-            Software Engineering program..
+            with strong collaborative communication skills.
           </p>
         </AnimationContainer>
       </AboutCard>
@@ -118,7 +116,7 @@ export default function AboutPage() {
             <div className="mb-6">
               <h2 className="text-2xl font-helvetica-medium">Resilence</h2>
               <p>
-                As a mother of a child who is not up to 3 years, I was able to
+                As a mother of a child who is not up to 4 years, I was able to
                 beat all odds to start self-learning, applied for and got into
                 Women Techsters Fellowship program and graduated top 10% of the
                 class.

@@ -4,7 +4,6 @@ import AboutCard from "../components/AboutCard";
 import B from "../assets/bforbaker.svg";
 import SkillSet from "../components/SkillSet";
 import Education from "../components/Education";
-import OluwatoyinResume from "../assets/Oluwatoyin_Oredein_FullStack.pdf";
 import AnimationContainer from "../utils/AnimationContainer";
 
 export default function Resume() {
@@ -39,8 +38,8 @@ export default function Resume() {
         <section className="md:mt-40">
           <a
             className="flex items-center gap-2"
-            href={OluwatoyinResume}
-            download="Oluwatoyin_Oredein_CV.pdf"
+            href="/Oluwatoyin_Oredein_Fullstack.pdf"
+            download
           >
             <img src={Download} alt="Download icon" />
             <span className="underline">Download PDF Resume</span>
