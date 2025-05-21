@@ -38,7 +38,7 @@ export default function Resume() {
         <section className="md:mt-40">
           <a
             className="flex items-center gap-2"
-            href="/Oluwatoyin_Oredein_Fullstack.pdf"
+            href="/Oluwatoyin_Oredein_Frontend_Developer.pdf"
             download
           >
             <img src={Download} alt="Download icon" />
@@ -51,7 +51,7 @@ export default function Resume() {
                 <span>OREDEIN</span>
               </h1>
               <p className="text-black100 md:text-lg">
-                Software Engineer • Full stack developer
+                Software Developer • (Frontend Heavy)
               </p>
             </div>
             <div className="w-[56px] md:w-[136px] h-[40px] md:h-[96px] rounded-[80px] overflow-hidden my-3">
@@ -85,8 +85,8 @@ export default function Resume() {
       <AboutCard number={"01"} text={"SUMMARY"}>
         <AnimationContainer>
           <p className="text-lg mt-5">
-            Full stack developer with a keen ability to craft clean, readable,
-            and scalable code for visually appealing designs and smooth
+            Frontend developer with a keen ability to craft clean, readable, and
+            scalable code for visually appealing designs and smooth
             functionality. Passionate continuous learner, proactive problem
             solver, effective team player with strong collaborative
             communication skills, proficient in object-oriented and asynchronous

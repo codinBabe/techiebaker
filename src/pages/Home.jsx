@@ -44,11 +44,11 @@ export default function HomePage() {
   const renderDescription = () => (
     <>
       <p className="block md:hidden">
-        Full stack developer with a keen ability to craft clean, readable, and
+        Frontend developer with a keen ability to craft clean, readable, and
         scalable code for visually appealing designs and smooth functionality.
       </p>
       <p className="hidden md:block text-xl">
-        Full stack developer with a keen ability to craft clean,
+        Frontend developer with a keen ability to craft clean,
         <br />
         readable, and scalable code for visually appealing <br />
         designs and smooth functionality.
@@ -75,11 +75,11 @@ export default function HomePage() {
           <span>OREDEIN</span>
         </h1>
         <div className="flex items-center md:justify-center gap-1 md:gap-3 my-3 text-black100 whitespace-nowrap">
-          <p className="md:text-xl">Software Engineer</p>
+          <p className="md:text-xl">Software Developer</p>
           <div className="w-[56px] h-[40px] md:w-[136px] md:h-[96px] rounded-[80px] overflow-hidden">
             <img src={Oluwatoyin} alt="Oluwatoyin" className="w-full h-auto" />
           </div>
-          <p className="md:text-xl">Full stack developer</p>
+          <p className="md:text-xl">(Frontend Heavy)</p>
         </div>
         <div className="flex flex-col gap-3 md:gap-8 md:flex-row md:justify-center mt-8">
           {renderDescription()}
