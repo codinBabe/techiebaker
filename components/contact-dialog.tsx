@@ -15,20 +15,6 @@ interface ContactProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const backdrop = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-};
-
-const modal = {
-  hidden: { y: "-100vh", opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { delay: 0.3 },
-  },
-};
-
 const Contact = ({ isOpen, setIsOpen }: ContactProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>

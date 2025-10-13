@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Works } from "@/data/work";
 import CongratMessage from "@/components/congrat-message";
 import { useViewedProjects } from "@/hooks/use-view-project";
+import Link from "next/link";
 
 export default function Home() {
   const { projectsViewed, handleProjectView } = useViewedProjects();
@@ -89,7 +90,7 @@ export default function Home() {
             asChild
             className="p-0 font-semibold text-lg"
           >
-            <a href="/work">See all works</a>
+            <Link href="/work">See all works</Link>
           </Button>
         </div>
       </CustomSection>
@@ -118,7 +119,7 @@ export default function Home() {
                 className="p-0 font-semibold"
                 asChild
               >
-                <a href="/about">Know more</a>
+                <Link href="/about">Know more</Link>
               </Button>
             </div>
           </div>
