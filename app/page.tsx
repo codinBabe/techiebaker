@@ -1,103 +1,183 @@
+"use client";
+
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import WorkCard from "@/components/work-card";
+import CustomSection from "@/components/section";
+import TestimonialCard from "@/components/testimonial-card";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+import Reveal from "@/components/reveal";
+import { Button } from "@/components/ui/button";
+import { Works } from "@/data/work";
+import CongratMessage from "@/components/congrat-message";
+import { useViewedProjects } from "@/hooks/use-view-project";
+
+export default function Home() {
+  const { projectsViewed, handleProjectView } = useViewedProjects();
+
+  const message =
+    projectsViewed < 2 ? (
+      `🎯 View ${2 - projectsViewed} more project${
+        projectsViewed === 1 ? "" : "s"
+      } to win a free cupcake!`
+    ) : (
+      <CongratMessage />
+    );
+
+  return (
+    <div className="space-y-20">
+      {/* ===== Hero Section ===== */}
+      <Reveal amount={0.15} y={20}>
+        <section className="text-center md:mt-20 space-y-4">
+          <h1 className="text-5xl md:text-7xl font-medium flex flex-col md:flex-row justify-center gap-3">
+            <span className="font-sans font-bold">Oluwatoyin</span>
+            <span>OREDEIN</span>
+          </h1>
+
+          <div className="flex justify-center items-center gap-3 text-foreground-secondary md:text-xl">
+            <p>Software Developer</p>
+            <div className="w-14 h-10 md:w-32 md:h-24 rounded-full overflow-hidden">
+              <Image
+                src={"/images/Oluwatoyin.jpeg"}
+                alt="Oluwatoyin Oredein"
+                width={200}
+                height={100}
+                className="object-cover"
+              />
+            </div>
+            <p>(Frontend Heavy)</p>
+          </div>
+          <div className="md:text-left font-medium md:text-xl md:max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center">
+            <p>
+              Frontend developer with a keen ability to craft clean, readable,
+              and scalable code for visually appealing designs and smooth
+              functionality.
+            </p>
+            <p>
+              Proficient in object-oriented and asynchronous programming, REST
+              APIs, and data structures that drive dynamic and innovative
+              projects.
+            </p>
+          </div>
+        </section>
+      </Reveal>
+
+      {/* ===== Works Section ===== */}
+      <CustomSection number="01" title="Works">
+        {message}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {Works.slice(0, 4).map((work) => (
+            <WorkCard
+              key={work.id}
+              title={work.title}
+              projectType={work.projectType}
+              imgsrc={work.imgsrc}
+              imgsrclg={work.imgsrclg}
+              workId={work.id}
+              onView={() => handleProjectView(work.id)}
+            >
+              <p className="text-sm">{work.text}</p>
+            </WorkCard>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="text-center mt-4">
+          <Button
+            variant="link"
+            size={"lg"}
+            asChild
+            className="p-0 font-semibold text-lg"
+          >
+            <a href="/work">See all works</a>
+          </Button>
+        </div>
+      </CustomSection>
+
+      {/* ===== About Section ===== */}
+      <CustomSection number="02" title="About Oluwatoyin">
+        <Reveal amount={0.15} y={16}>
+          <div className="md:flex md:gap-24 items-start space-y-4 md:space-y-0">
+            <p className="text-sm uppercase whitespace-nowrap">
+              Who is Oluwatoyin?
+            </p>
+            <div className="space-y-2">
+              <p className="md:text-xl font-medium">
+                <span className="font-semibold">Oluwatoyin OREDEIN</span> is the
+                mother of a 3-year-old girl who against all odds started
+                learning software engineering by herself using online resources
+                and curriculums. A baker at night and a coder by day. She is a
+                passionate continuous learner, proactive problem solver, and
+                effective team player with strong collaborative communication
+                skills.
+              </p>
+
+              <Button
+                variant="link"
+                size={"lg"}
+                className="p-0 font-semibold"
+                asChild
+              >
+                <a href="/about">Know more</a>
+              </Button>
+            </div>
+          </div>
+        </Reveal>
+      </CustomSection>
+
+      {/* ===== Testimonials Section ===== */}
+      <CustomSection number="03" title="Feedbacks" className="relative">
+        <Reveal>
+          <TestimonialCard />
+        </Reveal>
+      </CustomSection>
+
+      {/* ===== Skills Section ===== */}
+      <CustomSection number="04" title="My Skills" className="mb-10">
+        <div className="flex flex-col gap-5 mt-4">
+          {[
+            {
+              label: "LANGUAGES",
+              items: ["C", "Python", "Javascript", "Typescript"],
+            },
+            {
+              label: "DATABASE",
+              items: ["MongoDB", "SQL"],
+            },
+            {
+              label: "FRAMEWORKS",
+              items: ["ReactJs", "NextJs", "Flask", "Express", "FastAPI"],
+            },
+            {
+              label: "VERSION CONTROL",
+              items: ["GIT"],
+            },
+            {
+              label: "TOOLS",
+              items: ["Postman"],
+            },
+          ].map((section) => (
+            <div
+              key={section.label}
+              className="grid grid-cols-1 md:grid-cols-[1fr_5fr] md:items-start overflow-hidden gap-2"
+            >
+              <h3>{section.label}</h3>
+              <div className="flex items-center gap-4 flex-wrap">
+                {section.items.map((item, i) => (
+                  <p
+                    key={item}
+                    className={`py-1 px-3 rounded-lg font-medium ${
+                      i % 2 === 0 ? "bg-accent" : "bg-accent-foreground"
+                    }`}
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CustomSection>
     </div>
   );
 }

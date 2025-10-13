@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Oluwatoyin Oredein Portfolio Website
 
-## Getting Started
+Welcome to the official portfolio website of Oluwatoyin Oredein. This site showcases my projects, skills, and professional journey.
 
-First, run the development server:
+### Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [About Me](#about-me)
+- [Projects](#projects)
+- [Skills](#skills)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### About Me
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. My journey in web development started with a curiosity for how websites are built and has grown into a full-fledged career.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Projects
 
-## Learn More
+Here are some of the projects I have worked on:
 
-To learn more about Next.js, take a look at the following resources:
+- **Period Slay**:
+  A robust full-stack period tracking web app developed with React.js. Key features include user
+  authentication, menstrual cycle prediction, and various additional tools to enhance period
+  management.
+- **ByeWind**:
+  A static Figma dashboard built with HTML, CSS, and JavaScript. It includes a toggle for dark/light
+  mode and uses Chart.js for visualizations, achieving 80% design accuracy.
+- **Isaac Akinyemi Portfolio**:
+  A personal portfolio website for Isaac Akinyemi, developed using React.js and Tailwind CSS. It
+  features a clean design and showcases various projects and skills.
+- **BlinkAV**:
+  A landing page for BlinkAV, a video creation platform, built with Next.js and Tailwind CSS. The
+  design is responsive and includes interactive elements to enhance user engagement.
+- **TechieBaker Portfolio**:
+  My personal portfolio website built with Next.js and Tailwind CSS. It features a modern design,
+  responsive layout, and showcases my projects and skills effectively.
+- **MovieBox**:
+  A movie discovery web app built with React.js and Tailwind CSS. It allows users to search for movies, view details, and create watchlists.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Skills
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- HTML
+- CSS
+- JavaScript
+- React
+- Node.js
+- Next.js
+- Radix UI
+- Framer Motion
+- Chart.js
+- API Integration
+- Tailwind CSS
+- Responsive Web Design
+- Figma to Code Conversion
+- Git & GitHub
+- UI/UX Design Principles
+- Agile Development
+- Problem-Solving
+- Communication & Team Collaboration
+- Time Management
+- Critical Thinking
+- Adaptability
+- Creativity
+- Attention to Detail
 
-## Deploy on Vercel
+### Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to reach out to me via [teboola2@gmail.com](mailto:teboola2@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/oluwatoyin-oredein).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for visiting my portfolio website!

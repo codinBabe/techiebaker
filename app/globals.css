@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+/* primaryOrange: "#F67D1F",
+        orange100: "#FFECDD",
+        orange200: "#C2B3A8",
+        orange300: "#F0D0B8",
+        orange400: "#C0BCB8",
+        primaryBlack: "#131211",
+        black100: "#464646",
+        black200: "#E4E4E4",
+        blue100: "#E3E3E3",
+        blue200: "#D9D9FA", */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffecdd;
+  --foreground: #131211;
+
+  --foreground-secondary: #464646;
+  --foreground-muted: #e4e4e4;
+
+  --primary: #f67d1f;
+  --secondary: #f0d0b8;
+  --tertiary: #c2b3a8;
+
+  --accent: #d9d9fa;
+  --accent-foreground: #e3e3e3;
+
+  --muted: #c0bcb8;
+  --shadow: rgba(0, 0, 0, 0.1);
+
+  --font-fraunces: "Fraunces", serif;
+  --font-neue: "Helvetica-Neue", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-shadow: var(--shadow);
+
+  --font-sans: var(--font-fraunces);
+  --font-neue: var(--font-neue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("/fonts/HelveticaNeueRoman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground text-base font-neue antialiased;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+section,
+div.about-card {
+  background-image: url("/images/bant-light.svg"), url("/images/bant-light.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: auto, auto;
 }
