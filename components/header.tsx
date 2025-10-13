@@ -32,7 +32,7 @@ export default function Header() {
   ];
 
   const renderMenuItem = (
-    { name, path, isActive }: any,
+    { name, path, isActive }: { name: string; path: string; isActive: boolean },
     index: number,
     isMobile = false
   ) => {
