@@ -9,7 +9,11 @@ import { useViewedProjects } from "@/hooks/use-view-project";
 export default function Page() {
   const { projectsViewed, handleProjectView } = useViewedProjects();
   return (
-    <SectionCard title="Works" className="md:mt-10 relative overflow-hidden">
+    <SectionCard
+      title="Works"
+      titleCls
+      className="md:mt-10 relative overflow-hidden"
+    >
       <>
         {projectsViewed < 2 ? (
           <p className="my-2">
