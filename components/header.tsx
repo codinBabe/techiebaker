@@ -72,7 +72,9 @@ export default function Header() {
       <div className="w-full max-w-6xl py-4 px-2 mx-auto relative">
         {/* Desktop Navigation */}
         <nav className="hidden md:flex justify-between items-center">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <ul className="flex items-center">
             {menuItems.map((item, index) => renderMenuItem(item, index))}
           </ul>

@@ -66,8 +66,8 @@
     @apply bg-background text-foreground text-base font-neue antialiased;
   }
 }
-section,
-div.about-card {
+
+section {
   background-image: url("/images/bant-light.svg"), url("/images/bant-light.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;

@@ -1,7 +1,7 @@
 "use client";
 
-import AboutCard from "@/components/about-card";
 import Reveal from "@/components/reveal";
+import SectionCard from "@/components/section-card";
 import { Button } from "@/components/ui/button";
 import { B } from "@/hooks/use-icon";
 import { Download } from "lucide-react";
@@ -64,19 +64,19 @@ export default function Page() {
             </div>
           </Reveal>
 
-          <Reveal className="flex flex-col md:flex-row gap-4 flex-wrap border-y border-tertiary p-2">
+          <Reveal className="flex flex-col md:flex-row gap-4 flex-wrap border-y border-tertiary p-1">
             {contactLinks.map(({ label, href, text }, index) => (
               <Button
-                variant={"link"}
-                className="p-0 w-auto text-base"
+                variant="link"
+                className="p-0 text-base whitespace-normal max-w-full text-left items-start"
                 key={index}
               >
-                {label}
+                {label}{" "}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href={href}
-                  className="text-ellipsis font-semibold underline"
+                  className="break-words max-w-full font-semibold underline"
                 >
                   {text}
                 </a>
@@ -86,7 +86,7 @@ export default function Page() {
         </div>
       </div>
 
-      <AboutCard number="01" text="SUMMARY">
+      <SectionCard number="01" title="SUMMARY" layout="inline" badge>
         <p className="text-lg">
           Frontend developer with a keen ability to craft clean, readable, and
           scalable code for visually appealing designs and smooth functionality.
@@ -96,9 +96,14 @@ export default function Page() {
           APIs, data structures, and algorithms that contribute to the success
           of dynamic and innovative projects.
         </p>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="02" text="OLUWATOYIN'S SKILLS">
+      <SectionCard
+        number="02"
+        title="OLUWATOYIN'S SKILLS"
+        layout="inline"
+        badge
+      >
         <div className="flex flex-col gap-5 mt-4">
           {[
             {
@@ -142,9 +147,9 @@ export default function Page() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="04" text="EDUCATION">
+      <SectionCard number="04" title="EDUCATION" layout="inline" badge>
         <div className="text-lg space-y-3">
           {[
             {
@@ -186,9 +191,9 @@ export default function Page() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="05" text="PROJECTS" clsname="mb-10">
+      <SectionCard number="05" title="PROJECTS" layout="inline" badge>
         <div className="text-lg space-y-1.5">
           {[
             "Recreated a Figma static dashboard with meticulous attention to detail, achieving 90% precision in design execution.",
@@ -204,7 +209,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
     </div>
   );
 }

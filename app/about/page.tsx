@@ -1,6 +1,6 @@
 "use client";
 
-import AboutCard from "@/components/about-card";
+import SectionCard from "@/components/section-card";
 import { B } from "@/hooks/use-icon";
 import { motion } from "framer-motion";
 
@@ -17,7 +17,7 @@ export default function AboutPage() {
         </h1>
         <p className="font-medium">Let’s rock and roll</p>
       </motion.div>
-      <AboutCard number="01" text="WHO IS OLUWATOYIN?">
+      <SectionCard number="01" title="WHO IS OLUWATOYIN?" layout="inline" badge>
         <p className="text-lg leading-relaxed">
           <span className="font-bold">Oluwatoyin OREDEIN</span> is a mother of a
           3-year-old girl who, against all odds, started learning software
@@ -26,9 +26,9 @@ export default function AboutPage() {
           proactive problem solver, and an effective team player with strong
           collaborative communication skills.
         </p>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="02" text="TOYIN'S JOURNEY">
+      <SectionCard number="02" title="TOYIN'S JOURNEY" layout="inline" badge>
         <div className="text-lg space-y-4">
           <div>
             <h2 className="font-medium">Self Learning</h2>
@@ -84,9 +84,14 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="03" text="WHAT I CAN DO FOR YOU">
+      <SectionCard
+        number="03"
+        title="WHAT I CAN DO FOR YOU"
+        layout="inline"
+        badge
+      >
         <div className="text-lg space-y-6">
           <div>
             <h3 className="font-bold">Frontend Development</h3>
@@ -103,9 +108,9 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="04" text="WHERE I CAN WORK">
+      <SectionCard number="04" title="WHERE I CAN WORK" layout="inline" badge>
         <div className="text-lg space-y-3">
           {[
             "Startups",
@@ -120,9 +125,9 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="05" text="WHAT I STAND FOR">
+      <SectionCard number="05" title="WHAT I STAND FOR" layout="inline" badge>
         <div className="text-lg space-y-6">
           {[
             {
@@ -148,9 +153,9 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="06" text="MY MANTRA">
+      <SectionCard number="06" title="MY MANTRA" layout="inline" badge>
         <div className="text-lg space-y-3">
           {[
             "Create your own reality",
@@ -165,9 +170,14 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="07" text="OLUWATOYIN'S SKILLS">
+      <SectionCard
+        number="07"
+        title="OLUWATOYIN'S SKILLS"
+        layout="inline"
+        badge
+      >
         <div className="flex flex-col gap-5">
           {[
             {
@@ -208,9 +218,9 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
 
-      <AboutCard number="08" text="MY SUPER POWERS" clsname="mb-10">
+      <SectionCard number="08" title="MY SUPER POWERS" layout="inline" badge>
         <div className="text-lg space-y-3">
           {[
             "I sometimes surprise myself by building something that works the first time.",
@@ -225,7 +235,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </AboutCard>
+      </SectionCard>
     </div>
   );
 }

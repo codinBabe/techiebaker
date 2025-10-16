@@ -1,7 +1,7 @@
 "use client";
 
 import CongratMessage from "@/components/congrat-message";
-import Section from "@/components/section";
+import SectionCard from "@/components/section-card";
 import WorkCard from "@/components/work-card";
 import { Works } from "@/data/work";
 import { useViewedProjects } from "@/hooks/use-view-project";
@@ -9,7 +9,7 @@ import { useViewedProjects } from "@/hooks/use-view-project";
 export default function Page() {
   const { projectsViewed, handleProjectView } = useViewedProjects();
   return (
-    <Section title="Works" className="md:mt-10 relative overflow-hidden">
+    <SectionCard title="Works" className="md:mt-10 relative overflow-hidden">
       <>
         {projectsViewed < 2 ? (
           <p className="my-2">
@@ -36,6 +36,6 @@ export default function Page() {
           </WorkCard>
         ))}
       </div>
-    </Section>
+    </SectionCard>
   );
 }

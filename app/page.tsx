@@ -3,15 +3,14 @@
 import Image from "next/image";
 
 import WorkCard from "@/components/work-card";
-import CustomSection from "@/components/section";
 import TestimonialCard from "@/components/testimonial-card";
-
 import Reveal from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { Works } from "@/data/work";
 import CongratMessage from "@/components/congrat-message";
 import { useViewedProjects } from "@/hooks/use-view-project";
 import Link from "next/link";
+import SectionCard from "@/components/section-card";
 
 export default function Home() {
   const { projectsViewed, handleProjectView } = useViewedProjects();
@@ -64,7 +63,7 @@ export default function Home() {
       </Reveal>
 
       {/* ===== Works Section ===== */}
-      <CustomSection number="01" title="Works">
+      <SectionCard number="01" title="Works" layout="stack" titleCls>
         {message}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,10 +92,10 @@ export default function Home() {
             <Link href="/work">See all works</Link>
           </Button>
         </div>
-      </CustomSection>
+      </SectionCard>
 
       {/* ===== About Section ===== */}
-      <CustomSection number="02" title="About Oluwatoyin">
+      <SectionCard number="02" title="About Oluwatoyin" layout="stack" titleCls>
         <Reveal amount={0.15} y={16}>
           <div className="md:flex md:gap-24 items-start space-y-4 md:space-y-0">
             <p className="text-sm uppercase whitespace-nowrap">
@@ -124,17 +123,29 @@ export default function Home() {
             </div>
           </div>
         </Reveal>
-      </CustomSection>
+      </SectionCard>
 
       {/* ===== Testimonials Section ===== */}
-      <CustomSection number="03" title="Feedbacks" className="relative">
+      <SectionCard
+        number="03"
+        title="Feedbacks"
+        className="relative"
+        layout="stack"
+        titleCls
+      >
         <Reveal>
           <TestimonialCard />
         </Reveal>
-      </CustomSection>
+      </SectionCard>
 
       {/* ===== Skills Section ===== */}
-      <CustomSection number="04" title="My Skills" className="mb-10">
+      <SectionCard
+        number="04"
+        title="My Skills"
+        className="mb-10"
+        layout="stack"
+        titleCls
+      >
         <div className="flex flex-col gap-5 mt-4">
           {[
             {
@@ -178,7 +189,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </CustomSection>
+      </SectionCard>
     </div>
   );
 }
