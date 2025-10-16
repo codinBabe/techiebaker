@@ -77,7 +77,9 @@ export default function AboutPage() {
 
               {edu.items.map((item, i) => (
                 <div className="flex items-center gap-3 my-1.5" key={i}>
-                  <B />
+                  <div className="flex-shrink-0">
+                    <B />
+                  </div>
                   <p className="">{item}</p>
                 </div>
               ))}
@@ -120,7 +122,9 @@ export default function AboutPage() {
             "Large organisations",
           ].map((place) => (
             <div key={place} className="flex items-center gap-3">
-              <B />
+              <div className="flex-shrink-0">
+                <B />
+              </div>
               <p>{place}</p>
             </div>
           ))}
@@ -165,7 +169,9 @@ export default function AboutPage() {
             "Simplicity is the soul of efficiency.",
           ].map((motto) => (
             <div key={motto} className="flex items-center gap-3">
-              <B />
+              <div className="flex-shrink-0">
+                <B />
+              </div>
               <p>{motto}</p>
             </div>
           ))}
@@ -230,7 +236,9 @@ export default function AboutPage() {
             "I am an excellent listener and always ready to learn.",
           ].map((power) => (
             <div key={power} className="flex items-center gap-3">
-              <B />
+              <div className="flex-shrink-0">
+                <B />
+              </div>
               <p>{power}</p>
             </div>
           ))}

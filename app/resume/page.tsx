@@ -184,7 +184,9 @@ export default function Page() {
 
               {edu.items.map((item, i) => (
                 <div className="flex items-center gap-3 my-1.5" key={i}>
-                  <B />
+                  <div className="flex-shrink-0">
+                    <B />
+                  </div>
                   <p className="">{item}</p>
                 </div>
               ))}
