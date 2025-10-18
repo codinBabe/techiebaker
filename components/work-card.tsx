@@ -61,9 +61,10 @@ const WorkCard = ({
           <picture>
             <source srcSet={imgsrclg} media="(min-width: 768px)" />
             <Image
+              unoptimized
               src={imgsrc}
               alt={title}
-              width={400}
+              width={300}
               height={240}
               className="rounded-lg object-cover"
             />
