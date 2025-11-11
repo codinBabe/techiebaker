@@ -30,7 +30,7 @@ const Contact = ({ isOpen, setIsOpen }: ContactProps) => {
         <div className="border-b border-foreground-muted pb-2 space-y-1">
           <Bant />
           <h1 className="text-2xl font-semibold">Contact Oluwatoyin</h1>
-          <p className="text-sm">Software Engineer • Full Stack Developer</p>
+          <p className="text-sm">Software Developer • Frontend Developer</p>
         </div>
 
         {/* Social links */}
