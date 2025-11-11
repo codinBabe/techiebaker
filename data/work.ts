@@ -1,13 +1,13 @@
 export const Works = [
   {
     id: 1,
-    title: "Blinkav- Smart Automation Web App",
+    title: "Dev-Events - Event Management Platform",
     projectType: "Web App • Real Project",
-    imgsrc: "/images/blinkav-mobile.png",
-    imgsrclg: "/images/blinkav-desktop.png",
-    text: "NEXT JS, TAILWIND CSS, API",
-    githubUrl: "",
-    liveProjectUrl: "https://blinkav.co",
+    imgsrc: "/images/devevent-mobile.png",
+    imgsrclg: "/images/devevent-desktop.png",
+    text: "NEXT JS, TAILWIND CSS, SSR",
+    githubUrl: "https://github.com/codinBabe/dev-events",
+    liveProjectUrl: "https://dev-events-green.vercel.app",
   },
   {
     id: 2,
@@ -51,12 +51,12 @@ export const Works = [
   },
   {
     id: 6,
-    title: "A Dictionary Web App - Quick Lingo",
+    title: "Resulyze - AI-Powered Resume Analyzer",
     projectType: "Web App • Personal Project",
-    imgsrc: "/images/quicklingo-mobile.png",
-    imgsrclg: "/images/quicklingo-desktop.png",
-    text: "HTML, CSS, JS, API",
-    githubUrl: "https://github.com/codinBabe/QuickLingo",
-    liveProjectUrl: "https://codinbabe.github.io/QuickLingo/",
+    imgsrc: "/images/resulyze-mobile.png",
+    imgsrclg: "/images/resulyze-desktop.png",
+    text: "REACT JS, TAILWIND CSS, OPENAI API",
+    githubUrl: "https://github.com/codinBabe/ai-resume-analyzer",
+    liveProjectUrl: "",
   },
 ];
