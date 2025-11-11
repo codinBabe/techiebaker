@@ -47,16 +47,17 @@ export default function Home() {
             </div>
             <p>(Frontend Heavy)</p>
           </div>
-          <div className="md:text-left font-medium md:text-xl md:max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center">
+          <div className="md:text-left font-medium md:text-xl md:max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
             <p>
-              Frontend developer with a keen ability to craft clean, readable,
-              and scalable code for visually appealing designs and smooth
-              functionality.
+              Frontend developer who builds clean, performant, and user-friendly
+              interfaces. I translate designs into fast, accessible, and
+              visually refined experiences using modern web technologies.
             </p>
             <p>
-              Proficient in object-oriented and asynchronous programming, REST
-              APIs, and data structures that drive dynamic and innovative
-              projects.
+              Skilled in writing scalable code with strong REST API
+              integrations. I enjoy solving real problems, optimizing
+              performance, and bringing digital products to life with clarity
+              and precision.
             </p>
           </div>
         </section>
@@ -103,13 +104,14 @@ export default function Home() {
             </p>
             <div className="space-y-2">
               <p className="md:text-xl font-medium">
-                <span className="font-semibold">Oluwatoyin OREDEIN</span> is the
-                mother of a 3-year-old girl who against all odds started
-                learning software engineering by herself using online resources
-                and curriculums. A baker at night and a coder by day. She is a
-                passionate continuous learner, proactive problem solver, and
-                effective team player with strong collaborative communication
-                skills.
+                <span className="font-semibold">Oluwatoyin OREDEIN</span> is a
+                mother, a builder, and a resilient self-taught software
+                developer who transitioned into tech through determination.
+                Starting from online resources and late-night study sessions,
+                I&apos;ve grown into a developer known for persistence,
+                adaptability, and strong communication. I bring curiosity,
+                discipline, and a “figure-it-out” mindset to every team I work
+                with.
               </p>
 
               <Button

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <div className="md:mt-10 space-y-10">
+    <div className="md:my-10 space-y-10">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -19,12 +19,13 @@ export default function AboutPage() {
       </motion.div>
       <SectionCard number="01" title="WHO IS OLUWATOYIN?" layout="inline" badge>
         <p className="text-lg leading-relaxed">
-          <span className="font-bold">Oluwatoyin OREDEIN</span> is a mother of a
-          3-year-old girl who, against all odds, started learning software
-          engineering by herself using online resources and curriculums. A baker
-          at night and coder by day, she is a passionate continuous learner,
-          proactive problem solver, and an effective team player with strong
-          collaborative communication skills.
+          <span className="font-bold">Oluwatoyin OREDEIN</span> is a mother, a
+          builder, and a resilient self-taught software developer who
+          transitioned into tech through determination. Starting from online
+          resources and late-night study sessions, I&apos;ve grown into a
+          developer known for persistence, adaptability, and strong
+          communication. I bring curiosity, discipline, and a “figure-it-out”
+          mindset to every team I work with.
         </p>
       </SectionCard>
 
@@ -47,10 +48,10 @@ export default function AboutPage() {
           {[
             {
               title: "Software Engineering — ALX Africa",
-              period: "Nov 2023 — Present",
+              period: "Oct 2023 — Nov 2024",
               items: [
                 "Acquired fundamental and advanced knowledge of C programming.",
-                "Currently exploring system administration and DevOps.",
+                "Learned system administration and DevOps.",
                 "Gained proficiency in object-oriented programming using Python.",
                 "Learned to choose and identify the optimal data structure and tools for each web application.",
                 "Developed teamwork abilities through comprehensive learning and practical tools.",
@@ -97,16 +98,18 @@ export default function AboutPage() {
         <div className="text-lg space-y-6">
           <div>
             <h3 className="font-bold">Frontend Development</h3>
+
             <p>
-              Using tools like HTML, CSS, React, and Next.js, I can assist in
-              bringing your designs to life.
+              I specialize in turning ideas and designs into real, fast,
+              responsive interfaces using: HTML, CSS, JavaScript, TypeScript,
+              React, Next.js
             </p>
           </div>
           <div>
             <h3 className="font-bold">Backend Development</h3>
             <p>
-              With tools like Node.js (Express) and Python (Flask), I can help
-              implement the functionality behind your designs.
+              I can also contribute to backend implementation using: Node.js
+              (Express), Python (Flask, FastAPI)
             </p>
           </div>
         </div>
@@ -136,19 +139,19 @@ export default function AboutPage() {
           {[
             {
               title: "Resilience",
-              desc: "As a mother of a child who is not up to 4 years, I was able to beat all odds to start self-learning, apply for and graduate top 10% in the Women Techsters Fellowship program.",
+              desc: "I learned to code while raising a toddler and still graduated in the top 10% of my cohort.",
             },
             {
               title: "Adaptability",
-              desc: "I adapt quickly to new environments, challenges, and technologies. Whether it's learning a new language or adjusting to different work cultures, I thrive in dynamic situations.",
+              desc: "Whether it’s a new language, tool, or workflow, I adjust quickly and stay productive.",
             },
             {
               title: "Communication",
-              desc: "Contrary to the stereotype that software engineers lack communication skills, I am an effective communicator and an active listener.",
+              desc: "I believe a great developer not only writes good code but also communicates clearly.",
             },
             {
               title: "Continuous Learning",
-              desc: "Learning is a continuous process, and I am always open to improving my craft and staying relevant in the industry.",
+              desc: "I stay committed to improving my craft and keeping up with industry best practices.",
             },
           ].map((item) => (
             <div key={item.title}>
@@ -169,7 +172,7 @@ export default function AboutPage() {
             "Simplicity is the soul of efficiency.",
           ].map((motto) => (
             <div key={motto} className="flex items-center gap-3">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <B />
               </div>
               <p>{motto}</p>
@@ -232,11 +235,10 @@ export default function AboutPage() {
             "I sometimes surprise myself by building something that works the first time.",
             "One of my mutant abilities is reading intentions from code.",
             "I have a sixth sense for missing semicolons.",
-            "I can find the perfect meme to explain any bug.",
-            "I am an excellent listener and always ready to learn.",
+            "I listen deeply and stay open to feedback",
           ].map((power) => (
             <div key={power} className="flex items-center gap-3">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <B />
               </div>
               <p>{power}</p>
