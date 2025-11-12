@@ -10,7 +10,7 @@ import ProjectViewer from "@/components/project-viewer";
 
 export default function Home() {
   return (
-    <div className="space-y-20 mb-10">
+    <div className="space-y-20">
       {/* ===== Hero Section ===== */}
       <Reveal amount={0.15} y={20}>
         <section className="text-center md:mt-20 space-y-4">
@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <p>(Frontend Heavy)</p>
           </div>
-          <div className="md:text-left font-medium md:text-xl md:max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row gap-6 max-w-4xl mx-auto text-foreground-secondary text-md md:text-lg">
             <p>
               Frontend developer who builds clean, performant, and user-friendly
               interfaces. I translate designs into fast, accessible, and
