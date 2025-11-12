@@ -56,7 +56,7 @@ export default function Home() {
         number="01"
         layout="stack"
         limit={4}
-        showButton={true}
+        showButton
       />
 
       {/* ===== About Section ===== */}
