@@ -55,8 +55,8 @@ export const Works = [
     projectType: "Web App • Personal Project",
     imgsrc: "/images/resulyze-mobile.png",
     imgsrclg: "/images/resulyze-desktop.png",
-    text: "REACT JS, TAILWIND CSS, OPENAI API",
+    text: "REACT ROUTER, TAILWIND CSS, PuterJs",
     githubUrl: "https://github.com/codinBabe/ai-resume-analyzer",
-    liveProjectUrl: "",
+    liveProjectUrl: "https://resulyze-ai.vercel.app/",
   },
 ];
