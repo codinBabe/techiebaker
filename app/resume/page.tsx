@@ -1,5 +1,3 @@
-"use client";
-
 import Reveal from "@/components/reveal";
 import SectionCard from "@/components/section-card";
 import { Button } from "@/components/ui/button";
@@ -28,7 +26,7 @@ export default function Page() {
   return (
     <div className="md:mt-10 space-y-10">
       <div>
-        <Reveal>
+        <Reveal y={12}>
           <Button
             variant={"link"}
             className="p-0 text-base font-medium"
@@ -41,7 +39,7 @@ export default function Page() {
           </Button>
         </Reveal>
         <div className="space-y-4">
-          <Reveal>
+          <Reveal y={12}>
             <div className="md:flex items-center justify-between">
               <div>
                 <h1 className="text-xl md:text-5xl">
@@ -64,7 +62,10 @@ export default function Page() {
             </div>
           </Reveal>
 
-          <Reveal className="flex flex-col md:flex-row gap-4 flex-wrap border-y border-tertiary p-1">
+          <Reveal
+            y={12}
+            className="flex flex-col md:flex-row gap-4 flex-wrap border-y border-tertiary p-1"
+          >
             {contactLinks.map(({ label, href, text }, index) => (
               <Button
                 variant="link"

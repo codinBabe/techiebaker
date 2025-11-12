@@ -1,29 +1,14 @@
-"use client";
-
 import Image from "next/image";
 
-import WorkCard from "@/components/work-card";
 import TestimonialCard from "@/components/testimonial-card";
 import Reveal from "@/components/reveal";
 import { Button } from "@/components/ui/button";
-import { Works } from "@/data/work";
-import CongratMessage from "@/components/congrat-message";
-import { useViewedProjects } from "@/hooks/use-view-project";
+
 import Link from "next/link";
 import SectionCard from "@/components/section-card";
+import ProjectViewer from "@/components/project-viewer";
 
 export default function Home() {
-  const { projectsViewed, handleProjectView } = useViewedProjects();
-
-  const message =
-    projectsViewed < 2 ? (
-      `🎯 View ${2 - projectsViewed} more project${
-        projectsViewed === 1 ? "" : "s"
-      } to win a free cupcake!`
-    ) : (
-      <CongratMessage />
-    );
-
   return (
     <div className="space-y-20">
       {/* ===== Hero Section ===== */}
@@ -47,7 +32,7 @@ export default function Home() {
             </div>
             <p>(Frontend Heavy)</p>
           </div>
-          <div className="md:text-left font-medium md:text-xl md:max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row gap-6 max-w-4xl mx-auto text-foreground-secondary text-md md:text-lg">
             <p>
               Frontend developer who builds clean, performant, and user-friendly
               interfaces. I translate designs into fast, accessible, and
@@ -64,36 +49,15 @@ export default function Home() {
       </Reveal>
 
       {/* ===== Works Section ===== */}
-      <SectionCard number="01" title="Works" layout="stack" titleCls>
-        {message}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {Works.slice(0, 4).map((work) => (
-            <WorkCard
-              key={work.id}
-              title={work.title}
-              projectType={work.projectType}
-              imgsrc={work.imgsrc}
-              imgsrclg={work.imgsrclg}
-              workId={work.id}
-              onView={() => handleProjectView(work.id)}
-            >
-              <p className="text-sm">{work.text}</p>
-            </WorkCard>
-          ))}
-        </div>
-
-        <div className="text-center mt-4">
-          <Button
-            variant="link"
-            size={"lg"}
-            asChild
-            className="p-0 font-semibold text-lg"
-          >
-            <Link href="/work">See all works</Link>
-          </Button>
-        </div>
-      </SectionCard>
+      <ProjectViewer
+        title="Works"
+        titleCls
+        number="01"
+        layout="stack"
+        limit={4}
+        showButton
+      />
 
       {/* ===== About Section ===== */}
       <SectionCard number="02" title="About Oluwatoyin" layout="stack" titleCls>
@@ -135,7 +99,7 @@ export default function Home() {
         layout="stack"
         titleCls
       >
-        <Reveal>
+        <Reveal y={12}>
           <TestimonialCard />
         </Reveal>
       </SectionCard>

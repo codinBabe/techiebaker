@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import WorkCard from "@/components/work-card";
 import { LinkExport } from "@/hooks/use-icon";
-import CongratMessage from "@/components/congrat-message";
+import { motion } from "framer-motion";
 import { useViewedProjects } from "@/hooks/use-view-project";
 
 export default function Page() {
@@ -32,7 +32,7 @@ export default function Page() {
   );
 
   return (
-    <>
+    <div>
       <Link
         href="/work"
         className="flex items-center gap-2 text-foreground-secondary"
@@ -63,30 +63,48 @@ export default function Page() {
         />
       </section>
 
-      {projectsViewed >= 2 && <CongratMessage />}
+      {projectsViewed >= 2 && (
+        <motion.div
+          className="my-2 md:text-lg font-semibold"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: [0.8, 1.1, 1], opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          🎉 Congratulations! You’ve unlocked your cupcake{" "}
+          <motion.span
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="inline-block"
+          >
+            🧁
+          </motion.span>
+        </motion.div>
+      )}
 
       <section className="mb-10">
         <h2 className="font-sans text-2xl font-semibold mb-4">Related works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {Works.slice(2, 4).map((relatedWork) => (
-            <WorkCard
-              key={relatedWork.id}
-              title={relatedWork.title}
-              projectType={relatedWork.projectType}
-              imgsrc={relatedWork.imgsrc}
-              imgsrclg={relatedWork.imgsrclg}
-              workId={relatedWork.id}
-              onView={() => handleProjectView(relatedWork.id)}
-            >
-              <p>{relatedWork.text}</p>
-            </WorkCard>
-          ))}
+          {Works.filter((w) => w.id !== workId)
+            .slice(0, 2)
+            .map((relatedWork) => (
+              <WorkCard
+                key={relatedWork.id}
+                title={relatedWork.title}
+                projectType={relatedWork.projectType}
+                imgsrc={relatedWork.imgsrc}
+                imgsrclg={relatedWork.imgsrclg}
+                workId={relatedWork.id}
+                onView={() => handleProjectView(relatedWork.id)}
+              >
+                <p>{relatedWork.text}</p>
+              </WorkCard>
+            ))}
         </div>
 
         <div className="underline text-lg text-center font-semibold mt-5">
           <Link href="/work">See all works</Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

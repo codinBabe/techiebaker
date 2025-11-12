@@ -21,7 +21,7 @@ const Contact = ({ isOpen, setIsOpen }: ContactProps) => {
       <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
       <DialogContent
         aria-describedby={undefined}
-        className="fixed left-1/2 top-1/2 w-full max-w-xs md:max-w-md -translate-x-1/2 -translate-y-1/2 
+        className="fixed left-1/2 top-1/2 w-full max-w-xs -translate-x-1/2 -translate-y-1/2 
                    bg-white p-4 rounded-xl shadow-xl space-y-4"
       >
         <DialogTitle className="sr-only">Contact Oluwatoyin</DialogTitle>

@@ -1,22 +1,16 @@
-"use client";
-
+import Reveal from "@/components/reveal";
 import SectionCard from "@/components/section-card";
 import { B } from "@/hooks/use-icon";
-import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <div className="md:my-10 space-y-10">
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+    <div className="space-y-10">
+      <Reveal x={-20} duration={0.6}>
         <h1 className="font-sans font-semibold text-xl mb-1">
           About Oluwatoyin OREDEIN
         </h1>
         <p className="font-medium">Let’s rock and roll</p>
-      </motion.div>
+      </Reveal>
       <SectionCard number="01" title="WHO IS OLUWATOYIN?" layout="inline" badge>
         <p className="text-lg leading-relaxed">
           <span className="font-bold">Oluwatoyin OREDEIN</span> is a mother, a
