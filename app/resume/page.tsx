@@ -1,5 +1,3 @@
-"use client";
-
 import Reveal from "@/components/reveal";
 import SectionCard from "@/components/section-card";
 import { Button } from "@/components/ui/button";

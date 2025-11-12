@@ -58,7 +58,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full space-y-10">
+    <footer className="w-full space-y-10 mt-8">
       {/* CTA Section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

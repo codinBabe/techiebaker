@@ -32,7 +32,7 @@ export default function Page() {
   );
 
   return (
-    <>
+    <div>
       <Link
         href="/work"
         className="flex items-center gap-2 text-foreground-secondary"
@@ -68,25 +68,27 @@ export default function Page() {
       <section className="mb-10">
         <h2 className="font-sans text-2xl font-semibold mb-4">Related works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {Works.slice(2, 4).map((relatedWork) => (
-            <WorkCard
-              key={relatedWork.id}
-              title={relatedWork.title}
-              projectType={relatedWork.projectType}
-              imgsrc={relatedWork.imgsrc}
-              imgsrclg={relatedWork.imgsrclg}
-              workId={relatedWork.id}
-              onView={() => handleProjectView(relatedWork.id)}
-            >
-              <p>{relatedWork.text}</p>
-            </WorkCard>
-          ))}
+          {Works.filter((w) => w.id !== workId)
+            .slice(0, 2)
+            .map((relatedWork) => (
+              <WorkCard
+                key={relatedWork.id}
+                title={relatedWork.title}
+                projectType={relatedWork.projectType}
+                imgsrc={relatedWork.imgsrc}
+                imgsrclg={relatedWork.imgsrclg}
+                workId={relatedWork.id}
+                onView={() => handleProjectView(relatedWork.id)}
+              >
+                <p>{relatedWork.text}</p>
+              </WorkCard>
+            ))}
         </div>
 
         <div className="underline text-lg text-center font-semibold mt-5">
           <Link href="/work">See all works</Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

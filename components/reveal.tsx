@@ -10,6 +10,7 @@ interface RevealProps {
   amount?: number;
   once?: boolean;
   y?: number;
+  x?: number;
   duration?: number;
 }
 
@@ -18,14 +19,15 @@ const Reveal = ({
   className,
   amount = 0.2,
   once = true,
-  y = 12,
+  y = 0,
+  x = 0,
   duration = 0.6,
 }: RevealProps) => {
   return (
     <motion.div
       className={cn(className)}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x, y }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once, amount }}
       transition={{ duration, ease: "easeOut" as const }}
     >

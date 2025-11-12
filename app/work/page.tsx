@@ -1,45 +1,18 @@
-"use client";
+import { Metadata } from "next";
+import ProjectViewer from "@/components/project-viewer";
 
-import CongratMessage from "@/components/congrat-message";
-import SectionCard from "@/components/section-card";
-import WorkCard from "@/components/work-card";
-import { Works } from "@/data/work";
-import { useViewedProjects } from "@/hooks/use-view-project";
+const metadata: Metadata = {
+  title: "Works | Oluwatoyin Oredein",
+  description:
+    "Explore the projects and works of Oluwatoyin Oredein, showcasing a diverse portfolio of software development and digital experiences.",
+};
 
 export default function Page() {
-  const { projectsViewed, handleProjectView } = useViewedProjects();
   return (
-    <SectionCard
+    <ProjectViewer
       title="Works"
       titleCls
-      className="md:mt-10 relative overflow-hidden"
-    >
-      <>
-        {projectsViewed < 2 ? (
-          <p className="my-2">
-            🎯 View <b>{2 - projectsViewed}</b> more project
-            {projectsViewed === 1 ? "" : "s"} to win a free cupcake!
-          </p>
-        ) : (
-          <CongratMessage />
-        )}
-      </>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-        {Works.map((work) => (
-          <WorkCard
-            key={work.id}
-            title={work.title}
-            projectType={work.projectType}
-            imgsrc={work.imgsrc}
-            imgsrclg={work.imgsrclg}
-            workId={work.id}
-            onView={() => handleProjectView(work.id)}
-          >
-            <p className="text-sm">{work.text}</p>
-          </WorkCard>
-        ))}
-      </div>
-    </SectionCard>
+      className="md:my-10 relative overflow-hidden"
+    />
   );
 }
