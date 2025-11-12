@@ -42,7 +42,7 @@ const ProjectViewer = ({
         animate={{ scale: [0.8, 1.1, 1], opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <span aria-label="celebration">🎉</span> Congratulations! You've
+        <span aria-label="celebration">🎉</span> Congratulations! You&apos;ve
         unlocked your cupcake{" "}
         <motion.span
           animate={{ y: [0, -5, 0] }}
