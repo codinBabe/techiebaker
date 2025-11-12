@@ -99,7 +99,7 @@ export default function Home() {
         layout="stack"
         titleCls
       >
-        <Reveal>
+        <Reveal y={12}>
           <TestimonialCard />
         </Reveal>
       </SectionCard>

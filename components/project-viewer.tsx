@@ -31,21 +31,24 @@ const ProjectViewer = ({
 
   const message =
     projectsViewed < 2 ? (
-      `🎯 View ${2 - projectsViewed} more project${
-        projectsViewed === 1 ? "" : "s"
-      } to win a free cupcake!`
+      <span>
+        <span aria-label="target">🎯</span> View ${2 - projectsViewed} more
+        project${projectsViewed === 1 ? "" : "s"} to win a free cupcake!
+      </span>
     ) : (
       <motion.div
-        className="my-2 md:text-lg font-semibold"
+        className="md:text-lg font-semibold"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: [0.8, 1.1, 1], opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        🎉 Congratulations! You’ve unlocked your cupcake{" "}
+        <span aria-label="celebration">🎉</span> Congratulations! You've
+        unlocked your cupcake{" "}
         <motion.span
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="inline-block"
+          aria-label="cupcake"
         >
           🧁
         </motion.span>
@@ -62,7 +65,9 @@ const ProjectViewer = ({
       number={number}
       className={className}
     >
-      {message}
+      <div role="status" aria-live="polite" className="my-2">
+        {message}
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {displayedWorks.map((work) => (
